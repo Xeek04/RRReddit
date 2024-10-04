@@ -20,3 +20,35 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+
+.vote-buttons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.upvote, .downvote {
+    background-color: transparent;
+    border: none;
+    font-size: 24px; /* Adjust font size */
+    padding: 10px; /* Adjust padding for size */
+    width: 60px; /* Fixed width */
+    height: 60px; /* Fixed height */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    border-radius: 10px;
+    transition-duration: 0.4s; /* Smooth transition */
+}
+
+    /* Optional: Add hover effects */
+    .upvote:hover {
+        border: 2px solid white; /* Square border color */
+        background-color: ghostwhite; /* Optional: Add a subtle green background on hover */
+    }
+
+    .downvote:hover {
+        border: 2px solid white; /* Square border color */
+        background-color: ghostwhite; /* Optional: Add a subtle red background on hover *
+        
+    }
