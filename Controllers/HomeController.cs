@@ -18,6 +18,11 @@ namespace RRReddit.Controllers
             return View();
         }
 
+        public IActionResult Button()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
