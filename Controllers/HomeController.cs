@@ -18,6 +18,21 @@ namespace RRReddit.Controllers
             return View();
         }
 
+        public IActionResult Explore()
+        {
+            return View();
+        }
+
+        public IActionResult Info()
+        {
+            return View();
+        }
+
+        public IActionResult Subreddit()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
