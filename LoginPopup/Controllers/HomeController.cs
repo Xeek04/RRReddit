@@ -15,7 +15,7 @@ namespace LoginPopup.Controllers
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            _firebaseAuth = new FirebaseAuthProvider(new FirebaseConfig("Your_Firebase_API_Key"));
+            _firebaseAuth = new FirebaseAuthProvider(new FirebaseConfig("AIzaSyCacz_YoziQxAIwvZExl2hP3hwXm8IdMWs"));
         }
 
         public IActionResult Logout()
@@ -35,6 +35,26 @@ namespace LoginPopup.Controllers
         }
 
         [HttpPost]
+        [HttpPost]
+
+        private string GetFirebaseAuthErrorMessage(FirebaseAuthException ex)
+        {
+            switch (ex.Reason)
+            {
+                case AuthErrorReason.WrongPassword:
+                    return "Incorrect password. Please try again.";
+                case AuthErrorReason.UnknownEmailAddress:
+                    return "Email address not found. Please check and try again.";
+                case AuthErrorReason.InvalidEmailAddress:
+                    return "Invalid email address format.";
+                case AuthErrorReason.UserDisabled:
+                    return "This user account has been disabled.";
+                // Add more cases as needed for different error reasons
+                default:
+                    return "An error occurred during authentication. Please try again.";
+            }
+        }
+
         public async Task<IActionResult> LoginUser(LoginModel vm)
         {
             if (!ModelState.IsValid)
@@ -50,14 +70,11 @@ namespace LoginPopup.Controllers
 
             try
             {
-                // Create the user with Firebase Authentication
-                await _firebaseAuth.CreateUserWithEmailAndPasswordAsync(vm.EmailAddress, vm.Password);
-
                 // Sign in the user to get the token
                 var firebaselink = await _firebaseAuth.SignInWithEmailAndPasswordAsync(vm.EmailAddress, vm.Password);
                 string accessToken = firebaselink.FirebaseToken;
 
-                if (accessToken != null)
+                if (!string.IsNullOrEmpty(accessToken))
                 {
                     HttpContext.Session.SetString("AccessToken", accessToken);
                     // Redirect to Index or show a success message
@@ -65,18 +82,19 @@ namespace LoginPopup.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Authentication failed.");
+                    ModelState.AddModelError(string.Empty, "Authentication failed. Invalid token.");
                     return View("create", vm);
                 }
             }
             catch (FirebaseAuthException ex)
             {
                 // Handle Firebase authentication exceptions
-                var errorMessage = ex.Reason.ToString();
+                var errorMessage = GetFirebaseAuthErrorMessage(ex);
                 ModelState.AddModelError(string.Empty, errorMessage);
                 return View("create", vm);
             }
         }
+
 
         public IActionResult Privacy()
         {
@@ -109,6 +127,15 @@ namespace LoginPopup.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
+        public IActionResult AccountPage()
+        {
+            return View();
+        }
+
+        public IActionResult Testpage()
+        {
+            return View();
+        }
         // Other actions...
     }
 }

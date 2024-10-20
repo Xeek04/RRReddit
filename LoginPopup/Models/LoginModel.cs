@@ -11,7 +11,7 @@ namespace LoginPopup.Models
         public string EmailAddress { get; set; } = null!;
 
         [Required(ErrorMessage = "Password is required.")]
-        [RegularExpression(@"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$", ErrorMessage = "Password must be at least 6 characters long and contain at least one letter and one number.")]
+      /*[RegularExpression(@"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$", ErrorMessage = "Password must be at least 6 characters long and contain at least one letter and one number.")] */
         [DataType(DataType.Password)]
         public string Password { get; set; } = null!;
     }
