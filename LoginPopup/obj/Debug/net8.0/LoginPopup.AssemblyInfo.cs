@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LoginPopup")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e2d19e13e106bbb9b0334cc3a9bd8ce918f6b7cf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb1cd7ddbd8e178e6bfd12b7ace7f0a6cbb23fca")]
 [assembly: System.Reflection.AssemblyProductAttribute("LoginPopup")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LoginPopup")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
