@@ -1,6 +1,14 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\LoginPopup",
+    "\\LoginPopup\\Views",
+    "\\LoginPopup\\Views\\Home",
+    "\\LoginPopup\\wwwroot",
+    "\\Views",
+    "\\Views\\Home",
+    "\\wwwroot"
   ],
+  "SelectedNode": "\\LoginPopup\\Views\\Home\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }

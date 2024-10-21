@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\LoginPopup.csproj": {}
+    "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\LoginPopup.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\LoginPopup.csproj": {
+    "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\LoginPopup.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\LoginPopup.csproj",
+        "projectUniqueName": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\LoginPopup.csproj",
         "projectName": "LoginPopup",
-        "projectPath": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\LoginPopup.csproj",
-        "packagesPath": "C:\\Users\\Coby Taylor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\obj\\",
+        "projectPath": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\LoginPopup.csproj",
+        "packagesPath": "C:\\Users\\senmi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Coby Taylor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\senmi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
