@@ -84,7 +84,7 @@
               "RelativeDocumentMoniker": "LoginPopup\\Views\\Home\\Button.cshtml",
               "ToolTip": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\Views\\Home\\Button.cshtml",
               "RelativeToolTip": "LoginPopup\\Views\\Home\\Button.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACQAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAUwCQAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-16T17:05:24.628Z",
               "EditorCaption": ""
@@ -99,8 +99,7 @@
               "RelativeToolTip": "LoginPopup\\Views\\Home\\Explore.cshtml",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAAAEAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-16T17:05:27.995Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-16T17:05:27.995Z"
             },
             {
               "$type": "Document",
@@ -112,8 +111,7 @@
               "RelativeToolTip": "LoginPopup\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAADkAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-16T19:23:32.479Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-16T19:23:32.479Z"
             },
             {
               "$type": "Document",
@@ -125,8 +123,7 @@
               "RelativeToolTip": "LoginPopup\\Views\\Home\\AccountPage.cshtml",
               "ViewState": "AgIAAGwAAAAAAAAAAAAAAEIAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-16T19:14:15.309Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-16T19:14:15.309Z"
             },
             {
               "$type": "Document",
@@ -138,8 +135,7 @@
               "RelativeToolTip": "LoginPopup\\Views\\Home\\Testpage.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-16T20:10:45.07Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-16T20:10:45.07Z"
             },
             {
               "$type": "Document",
@@ -151,8 +147,7 @@
               "RelativeToolTip": "LoginPopup\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T17:02:49.683Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-16T17:02:49.683Z"
             },
             {
               "$type": "Document",
@@ -164,8 +159,7 @@
               "RelativeToolTip": "LoginPopup\\Controllers\\HomeController.cs",
               "ViewState": "AgIAADMAAAAAAAAAAAAowFIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T19:15:47.591Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-16T19:15:47.591Z"
             },
             {
               "$type": "Document",
@@ -177,8 +171,7 @@
               "RelativeToolTip": "LoginPopup\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAGsAAAAAAAAAAADgv5QAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-16T17:03:02.467Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-16T17:03:02.467Z"
             },
             {
               "$type": "Document",
@@ -190,8 +183,7 @@
               "RelativeToolTip": "LoginPopup\\Models\\ErrorViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T00:44:25.849Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-14T00:44:25.849Z"
             },
             {
               "$type": "Document",
@@ -203,8 +195,7 @@
               "RelativeToolTip": "LoginPopup\\Models\\LoginModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAC3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T00:44:30.405Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-14T00:44:30.405Z"
             },
             {
               "$type": "Document",
@@ -216,8 +207,7 @@
               "RelativeToolTip": "LoginPopup\\wwwroot\\js\\site.js",
               "ViewState": "AgIAACcAAAAAAAAAAAAAACwAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-10-16T16:53:00.469Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-16T16:53:00.469Z"
             },
             {
               "$type": "Document",
@@ -229,8 +219,7 @@
               "RelativeToolTip": "LoginPopup\\Views\\Home\\Subreddit.cshtml",
               "ViewState": "AgIAAD8AAAAAAAAAAAAAAJoAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-16T19:23:38.728Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-16T19:23:38.728Z"
             },
             {
               "$type": "Document",
@@ -242,8 +231,7 @@
               "RelativeToolTip": "LoginPopup\\Models\\ErrorModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T00:43:59.343Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-14T00:43:59.343Z"
             }
           ]
         }
