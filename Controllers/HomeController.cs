@@ -38,6 +38,54 @@ namespace RRReddit.Controllers
             return View();
         }
 
+        /* each subreddit gets called in layout and explore */
+        public IActionResult Action()
+        {
+            return View();
+        }
+
+        public IActionResult Comedy()
+        {
+            return View();
+        }
+
+        public IActionResult Drama()
+        {
+            return View();
+        }
+
+        public IActionResult Fantasy()
+        {
+            return View();
+        }
+
+        public IActionResult Horror()
+        {
+            return View();
+        }
+
+        public IActionResult Mystery()
+        {
+            return View();
+        }
+
+        public IActionResult Romance()
+        {
+            return View();
+        }
+
+        public IActionResult ScienceFiction()
+        {
+            return View();
+        }
+
+        public IActionResult Thriller()
+        {
+            return View();
+        }
+
+
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
