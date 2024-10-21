@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\LoginPopup.props" />
-</Project>
