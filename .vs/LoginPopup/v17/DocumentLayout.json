@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\obj\\Debug\\net8.0\\LoginPopup.RazorAssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoginPopup\\obj\\Debug\\net8.0\\LoginPopup.RazorAssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\obj\\Debug\\net8.0\\LoginPopup.AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoginPopup\\obj\\Debug\\net8.0\\LoginPopup.AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\obj\\Debug\\net8.0\\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoginPopup\\obj\\Debug\\net8.0\\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\coby taylor\\desktop\\all programming\\la tech programming\\software engineering and design\\rrreddit\\loginpopup\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -62,43 +74,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "LoginPopup\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "LoginPopup\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAowFIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T19:15:47.591Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AccountPage.cshtml",
-              "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Home\\AccountPage.cshtml",
-              "RelativeDocumentMoniker": "LoginPopup\\Views\\Home\\AccountPage.cshtml",
-              "ToolTip": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Home\\AccountPage.cshtml",
-              "RelativeToolTip": "LoginPopup\\Views\\Home\\AccountPage.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-16T19:14:15.309Z"
+              "DocumentIndex": 0,
+              "Title": "LoginPopup.RazorAssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\obj\\Debug\\net8.0\\LoginPopup.RazorAssemblyInfo.cs",
+              "RelativeDocumentMoniker": "LoginPopup\\obj\\Debug\\net8.0\\LoginPopup.RazorAssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\obj\\Debug\\net8.0\\LoginPopup.RazorAssemblyInfo.cs",
+              "RelativeToolTip": "LoginPopup\\obj\\Debug\\net8.0\\LoginPopup.RazorAssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T00:07:46.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginPopup.AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\obj\\Debug\\net8.0\\LoginPopup.AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "LoginPopup\\obj\\Debug\\net8.0\\LoginPopup.AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\obj\\Debug\\net8.0\\LoginPopup.AssemblyInfo.cs",
+              "RelativeToolTip": "LoginPopup\\obj\\Debug\\net8.0\\LoginPopup.AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T00:07:30.324Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": ".NETCoreApp,Version=v8.0.AssemblyAttributes.cs",
+              "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\obj\\Debug\\net8.0\\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs",
+              "RelativeDocumentMoniker": "LoginPopup\\obj\\Debug\\net8.0\\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs",
+              "ToolTip": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\obj\\Debug\\net8.0\\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs",
+              "RelativeToolTip": "LoginPopup\\obj\\Debug\\net8.0\\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T00:07:20.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Button.cshtml",
               "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Home\\Button.cshtml",
               "RelativeDocumentMoniker": "LoginPopup\\Views\\Home\\Button.cshtml",
@@ -110,7 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "LoginPopup\\Views\\Shared\\_Layout.cshtml",
@@ -122,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Program.cs",
               "RelativeDocumentMoniker": "LoginPopup\\Program.cs",
@@ -130,12 +155,11 @@
               "RelativeToolTip": "LoginPopup\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T17:02:49.683Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-16T17:02:49.683Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "LoginPopup\\Views\\Home\\Index.cshtml",
@@ -147,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "LoginPopup\\Models\\ErrorViewModel.cs",
@@ -159,7 +183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "LoginModel.cs",
               "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Models\\LoginModel.cs",
               "RelativeDocumentMoniker": "LoginPopup\\Models\\LoginModel.cs",
@@ -171,7 +195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "site.js",
               "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "LoginPopup\\wwwroot\\js\\site.js",
@@ -183,7 +207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "Explore.cshtml",
               "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Home\\Explore.cshtml",
               "RelativeDocumentMoniker": "LoginPopup\\Views\\Home\\Explore.cshtml",
@@ -196,6 +220,30 @@
             {
               "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "AccountPage.cshtml",
+              "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Home\\AccountPage.cshtml",
+              "RelativeDocumentMoniker": "LoginPopup\\Views\\Home\\AccountPage.cshtml",
+              "ToolTip": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Home\\AccountPage.cshtml",
+              "RelativeToolTip": "LoginPopup\\Views\\Home\\AccountPage.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-16T19:14:15.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "LoginPopup\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "LoginPopup\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAowFIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T19:15:47.591Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Testpage.cshtml",
               "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Home\\Testpage.cshtml",
               "RelativeDocumentMoniker": "LoginPopup\\Views\\Home\\Testpage.cshtml",
@@ -207,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "Subreddit.cshtml",
               "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Home\\Subreddit.cshtml",
               "RelativeDocumentMoniker": "LoginPopup\\Views\\Home\\Subreddit.cshtml",
@@ -219,7 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "ErrorModel.cs",
               "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Models\\ErrorModel.cs",
               "RelativeDocumentMoniker": "LoginPopup\\Models\\ErrorModel.cs",
