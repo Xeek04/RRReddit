@@ -1,0 +1,260 @@
+﻿<!DOCTYPE html>
+@using Microsoft.AspNetCore.Http
+@{
+    var isAuthenticated = Context.Session.GetString("AccessToken") != null;
+}
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - RRReddit</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/RRReddit.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+    <!-- nav bar styling + RRReddit styling -->
+    <style>
+        /* like a find and match, and then apply whats inside */
+        /* hover effect for buttons */
+        .navbar-nav .nav-link {
+            transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+            padding: 8px 16px; /* Add padding to give it more of a button-like appearance */
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: #f0f0f0; /* light gray */
+            color: #0056b3; /* Change text color to blue on hover */
+            border-radius: 20px; /* Add rounded corners */
+        }
+
+        /* Custom style for RRReddit text */
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+            font-family: 'Arial Rounded MT', sans-serif;
+        }
+    </style>
+
+
+
+    <!-- side bar styling -->
+    <style>
+        /* Styling the sidebar */
+        #sticky-sidebar {
+            background-color: rgba(255, 255, 255, 0.85); /* Transparent background with slight white tint */
+            border-right: 1px solid #d3d3d3; /* Light grey border to separate sidebar from content */
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+
+        /* Styling the sidebar links */
+        #sticky-sidebar .nav-link {
+            color: #000; /* Dark text for links */
+            padding: 10px 15px;
+            font-weight: 500; /* Slightly bold for readability */
+            border-radius: 4px; /* Rounded corners for the links */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Hover effect for links */
+        #sticky-sidebar .nav-link:hover {
+            background-color: rgba(0, 0, 0, 0.05); /* Slight grey background on hover */
+            color: #0079d3; /* Reddit-like blue color for hover */
+        }
+
+        /* Main content to start after the sidebar */
+        .main-content {
+            margin-left: 240px; /* Matches sidebar width */
+            padding-top: 56px; /* Ensure it doesn't overlap with the navbar */
+        }
+    </style>
+
+
+
+    <!-- positioning of nav bar and side bar -->
+    <style>
+        /* Ensure the navbar stays on top */
+        .navbar {
+            z-index: 1050; /* Higher than sidebar */
+            position: relative; /* Stay on top of other elements */
+        }
+
+        /* Sidebar adjustments */
+        #sticky-sidebar {
+            top: 56px; /* Adjust this to match the height of your navbar */
+            left: 0;
+            width: 200px; /* Set a specific width for sidebar */
+            height: calc(100vh - 56px); /* Sidebar should go full height, minus navbar height */
+            z-index: 1000; /* Lower z-index to ensure it stays behind navbar */
+        }
+
+        /* Ensure the main content area starts after the sidebar */
+        .main-content {
+            margin-left: 240px; /* Matches the width of the sidebar */
+            padding-top: 56px; /* Adjust according to your navbar height */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- nav bar with buttons -->
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+
+            <div class="container-fluid">
+                <!-- RRRedit button-->
+                <a class="navbar-brand d-flex align-items-center" asp-area="" asp-controller="Home" asp-action="Index">
+                    <i class="bi bi-film" style="margin-right: 5px;"></i> RRReddit
+                </a>
+
+                <!-- when window shrink, dropdown menu created-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <!-- all in this div will go into collapse menu when window shrunk-->
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between w-100">
+
+
+                    <!-- Centered Search bar (input only, submits on Enter) -->
+                    <form class="d-flex mx-auto" role="search" method="GET" action="/search">
+                        <input class="form-control" type="search" placeholder="Search RRReddit" aria-label="Search">
+                    </form>
+
+
+                    <!-- Right-aligned buttons -->
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Button">
+                                <i class="bi bi-person-circle"></i> Account
+                            </a>
+                        </li>
+                        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                            <ul class="navbar-nav ms-auto">
+                                @if (isAuthenticated)
+
+                                {
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-controller="Home" asp-action="Logout">Logout</a>
+                                    </li>
+                                }
+
+                                else
+
+                                {
+                                    <li class="nav-item">
+                                        <button type="button" class="btn btn-link nav-link text-dark" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                                    </li>
+                                }
+                            </ul>
+
+                        </div>
+                    </ul>
+                    
+
+                </div>
+            </div>
+        </nav>
+
+        <!-- Sidebar creation -->
+        <div id="sticky-sidebar" class="position-fixed">
+            <div class="nav flex-column flex-nowrap vh-100 overflow-auto p-2">
+
+                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">
+                    <i class="bi bi-house-fill"></i> Home
+                </a>
+
+                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Explore">
+                    <i class="bi bi-search-heart"></i> Explore
+                </a>
+
+                <!-- <a href="./" class="nav-link">RRR</a> -->
+                <hr>
+
+
+                 <!-- dropdown for communities -->
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="communitiesDropdown" role="button" data-bs-toggle="collapse" data-bs-target="#communitiesMenu" aria-expanded="false" aria-controls="communitiesMenu">
+                        <i class="bi bi-people-fill"></i> Communities
+                    </a>
+                    <!-- collapsible content for communities -->
+                    <div class="collapse" id="communitiesMenu">
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Subreddit">r/Action</a>
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Subreddit">r/Comedy</a>
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Subreddit">r/Drama</a>
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Subreddit">r/Fantasy</a>
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Subreddit">
+                            r/Horror <i class="bi bi-emoji-dizzy-fill"></i>
+                            <!-- maybe replace with actual pictures-->
+                        </a>
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Subreddit">r/Mystery</a>
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Subreddit">r/Romance</a>
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Subreddit">r/Science Fiction</a>
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Subreddit">r/Thriller</a>
+
+                    </div>
+                </div>
+                <hr>
+
+
+                <!-- dropdown for resources -->
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="ResourcesDropdown" role="button" data-bs-toggle="collapse" data-bs-target="#resourcesMenu" aria-expanded="false" aria-controls="resourcesMenu">
+                        <i class="bi bi-info-circle"></i> Resources
+                    </a>
+                    <!-- collapsible content for resources -->
+                    <div class="collapse" id="resourcesMenu">
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Info">About RRReddit </a>
+                        <!--
+                        <a href="#" class="nav-link">Whatever else</a>
+                        -->
+                    </div>
+                </div>
+                <hr>
+
+
+            </div>
+        </div>
+
+
+        <!-- main content -->
+        <div class="main-content">
+            <div class="container">
+                <!-- page content goes here
+                <p>Whatever goes here will be shown through all pages.
+                    Like the index and privacy page too
+                </p>
+                -->
+            </div>
+        </div>
+
+
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+   <!-- <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - RRReddit - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer> -->
+
+    @await Html.PartialAsync("create")
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
