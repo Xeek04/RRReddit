@@ -4,6 +4,7 @@ using System.Diagnostics;
 using RRReddit.Data;
 using MongoDB.Driver;
 using Firebase.Auth;
+using MongoDB.Bson;
 
 namespace RRReddit.Controllers
 {
@@ -80,11 +81,19 @@ namespace RRReddit.Controllers
             }
         }
 
-        [HttpGet]
         public async Task<IActionResult> Get()
         {
             var test = await _users.Find(_ => true).ToListAsync();
             Console.WriteLine(test[0].UserName);
+            return View("Index");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Update(string user, string newValue)
+        {
+            var search = Builders<DatabaseUser>.Filter.Eq(DatabaseUser => DatabaseUser.UserName, user); // affected user
+            var update = Builders<DatabaseUser>.Update.Set(DatabaseUser => DatabaseUser.UserName, newValue); // new value
+            await _users.UpdateOneAsync(search, update);
             return View("Index");
         }
 

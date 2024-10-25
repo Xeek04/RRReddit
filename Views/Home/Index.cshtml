@@ -72,7 +72,9 @@
             <!-- placeholder cards for now -->
             <div class="card">
                 <button></button>
-                <form asp-action="Get" method="get">
+                <form asp-action="Update" method="post">
+                    <input type="text" name="user"/>
+                    <input type="text" name="newValue"/>
                     <button></button>
                 </form>
                 <h5>Post 1</h5>

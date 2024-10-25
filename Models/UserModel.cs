@@ -16,5 +16,8 @@ namespace RRReddit.Models
 
         [BsonElement("password"), BsonRepresentation(BsonType.String)]
         public string? Password { get; set; }
+
+        [BsonElement("subreddits"), BsonRepresentation(BsonType.String)]
+        public string? Subreddits { get; set; }
     }
 }
