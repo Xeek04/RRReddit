@@ -4,6 +4,7 @@
     var isAuthenticated = Context.Session.GetString("AccessToken") != null;
 }
 
+
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -107,9 +108,16 @@
 
             <div class="container-fluid">
                 <!-- RRRedit button-->
-                <a class="navbar-brand d-flex align-items-center" asp-area="" asp-controller="Home" asp-action="Index">
-                    <i class="bi bi-film" style="margin-right: 5px;"></i> RRReddit
-                </a>
+                @if (isAuthenticated)
+                {
+                    <a class="navbar-brand d-flex align-items-center" asp-area="" asp-controller="Home" asp-action="Index">
+                        <i class="bi bi-film" style="margin-right: 5px;"></i> RRReddit
+                    </a>
+                }
+                else
+                {
+                    
+                }
 
                 <!-- when window shrink, dropdown menu created-->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -123,9 +131,16 @@
 
 
                     <!-- Centered Search bar (input only, submits on Enter) -->
-                    <form class="d-flex mx-auto" role="search" method="GET" action="/search">
-                        <input class="form-control" type="search" placeholder="Search RRReddit" aria-label="Search">
-                    </form>
+                    @if (isAuthenticated)
+                    {
+                        <form class="d-flex mx-auto" role="search" method="GET" action="/search">
+                            <input class="form-control" type="search" placeholder="Search RRReddit" aria-label="Search">
+                        </form>
+                    }
+                    else
+                    {
+                        
+                    }
 
 
                     <!-- Right-aligned buttons -->
@@ -137,9 +152,17 @@
                         </li>
                         <!-- come back to test change this-->
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AccountPage">
-                                <i class="bi bi-person-circle"></i> Account
-                            </a>
+                            @if (isAuthenticated)
+                            {
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AccountPage">
+                                    <i class="bi bi-person-circle"></i> Account
+                                </a>
+                            }
+
+                            else
+                            {
+                                  
+                            }
                         </li>
 
                         <li class="nav-item">
@@ -175,8 +198,11 @@
         </nav>
 
         <!-- Sidebar creation -->
-        <div id="sticky-sidebar" class="position-fixed">
-            <div class="nav flex-column flex-nowrap vh-100 overflow-auto p-2">
+        @if (isAuthenticated)
+        {
+
+            <div id="sticky-sidebar" class="position-fixed">
+                <div class="nav flex-column flex-nowrap vh-100 overflow-auto p-2">
 
                 <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">
                     <i class="bi bi-house-fill"></i> Home
@@ -191,10 +217,12 @@
 
 
                  <!-- dropdown for communities -->
+
                 <div class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="communitiesDropdown" role="button" data-bs-toggle="collapse" data-bs-target="#communitiesMenu" aria-expanded="false" aria-controls="communitiesMenu">
                         <i class="bi bi-people-fill"></i> Communities
                     </a>
+                 
                     <!-- collapsible content for communities -->
                     <div class="collapse" id="communitiesMenu">
                         <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Subreddit">r/Action</a>
@@ -213,6 +241,7 @@
                     </div>
                 </div>
                 <hr>
+        
 
 
                 <!-- dropdown for resources -->
@@ -232,8 +261,12 @@
 
 
             </div>
-        </div>
-
+            </div>
+        }
+        else
+        {
+            
+        }
 
         <!-- main content -->
         <div class="main-content">
@@ -254,19 +287,25 @@
         </main>
     </div>
 
+
    <!-- <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2024 - LoginPopup - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer> -->
+    
+    <!---passes a new instance of the LoginModel model to LoginPartial everytime it awaits it--->
+    @await Html.PartialAsync("LoginPartial", new LoginPopup.Models.LoginModel())
 
-    @await Html.PartialAsync("create")
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
 
 </body>
 </html>

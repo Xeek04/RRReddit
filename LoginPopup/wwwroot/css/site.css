@@ -48,6 +48,16 @@ body {
 
     .downvote:hover {
         border: 2px solid white; /* Square border color */
-        background-color: ghostwhite; /* Optional: Add a subtle red background on hover *
+        background-color: ghostwhite; /* Optional: Add a subtle red background on hover */
         
     }
+
+    .post-title-box {
+    border: 2px solid #ccc; /* Border to create the box effect */
+        padding: 10px; /* Space inside the box for better readability */
+        margin-bottom: 10px; /* Space below the box to separate it from content */
+        border-radius: 5px; /* Rounded corners for a nicer look */
+        background-color: #f9f9f9; /* Light background color to make it stand out */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: a slight shadow for more emphasis */
+    }
+

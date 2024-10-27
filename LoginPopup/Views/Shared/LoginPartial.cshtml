@@ -40,6 +40,9 @@
 
                 <!-- Link to Switch to Create Account Modal -->
                 <div class="text-center mt-3">
+                    <a href="#" onclick="switchToCreateAccountModal()">Did you forget your password?</a>
+                </div>
+                <div class="text-center mt-3">
                     <a href="#" onclick="switchToCreateAccountModal()">New to RRReddit? Create an account</a>
                 </div>
             </div>
@@ -59,7 +62,7 @@
 
             <!-- Modal Body -->
             <div class="modal-body">
-                <form asp-action="CreateUser" method="post" id="create-form">
+                <form asp-action="Create" method="post" id="create-form">
                     <div asp-validation-summary="All" class="text-danger"></div>
 
                     <div class="form-group mb-3">

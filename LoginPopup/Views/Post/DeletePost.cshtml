@@ -1,0 +1,13 @@
+﻿@model LoginPopup.Models.Post
+
+<h2>Delete Post</h2>
+<p>Are you sure you want to delete this post?</p>
+
+<h4>@Model.Title</h4>
+<p>@Model.Content</p>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
