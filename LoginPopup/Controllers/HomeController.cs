@@ -21,7 +21,11 @@ namespace LoginPopup.Controllers
         public IActionResult Logout()
         {
             HttpContext.Session.Remove("AccessToken");
+<<<<<<< HEAD
             return RedirectToAction("Info");
+=======
+            return RedirectToAction("Index");
+>>>>>>> master
         }
 
         public IActionResult Index()
@@ -29,13 +33,17 @@ namespace LoginPopup.Controllers
             return View();
         }
 
+<<<<<<< HEAD
         [HttpGet]
+=======
+>>>>>>> master
         public IActionResult Create()
         {
             return View();
         }
 
         [HttpPost]
+<<<<<<< HEAD
         public async Task<IActionResult> Create(LoginModel vm)
         {
             if (!ModelState.IsValid)
@@ -72,6 +80,9 @@ namespace LoginPopup.Controllers
 
         [HttpPost]
         //[HttpPost]
+=======
+        [HttpPost]
+>>>>>>> master
 
         private string GetFirebaseAuthErrorMessage(FirebaseAuthException ex)
         {
@@ -101,7 +112,11 @@ namespace LoginPopup.Controllers
                     _logger.LogError(error.ErrorMessage);
                 }
                 // Return the view with validation errors
+<<<<<<< HEAD
                 return View("LoginPartial", vm);
+=======
+                return View("create", vm);
+>>>>>>> master
             }
 
             try
@@ -112,16 +127,24 @@ namespace LoginPopup.Controllers
 
                 if (!string.IsNullOrEmpty(accessToken))
                 {
+<<<<<<< HEAD
                     //storing access token and email in session
                     HttpContext.Session.SetString("AccessToken", accessToken);
                     HttpContext.Session.SetString("UserEmail", vm.EmailAddress);
+=======
+                    HttpContext.Session.SetString("AccessToken", accessToken);
+>>>>>>> master
                     // Redirect to Index or show a success message
                     return RedirectToAction("Index");
                 }
                 else
                 {
                     ModelState.AddModelError(string.Empty, "Authentication failed. Invalid token.");
+<<<<<<< HEAD
                     return View("LoginPartial", vm);
+=======
+                    return View("create", vm);
+>>>>>>> master
                 }
             }
             catch (FirebaseAuthException ex)
@@ -129,7 +152,11 @@ namespace LoginPopup.Controllers
                 // Handle Firebase authentication exceptions
                 var errorMessage = GetFirebaseAuthErrorMessage(ex);
                 ModelState.AddModelError(string.Empty, errorMessage);
+<<<<<<< HEAD
                 return View("LoginPartial", vm);
+=======
+                return View("create", vm);
+>>>>>>> master
             }
         }
 
@@ -167,6 +194,7 @@ namespace LoginPopup.Controllers
 
         public IActionResult AccountPage()
         {
+<<<<<<< HEAD
             // Get the email from the session
             var email = HttpContext.Session.GetString("UserEmail");
 
@@ -182,9 +210,18 @@ namespace LoginPopup.Controllers
         }
 
 
+=======
+            return View();
+        }
+
+>>>>>>> master
         public IActionResult Testpage()
         {
             return View();
         }
+<<<<<<< HEAD
+=======
+        // Other actions...
+>>>>>>> master
     }
 }

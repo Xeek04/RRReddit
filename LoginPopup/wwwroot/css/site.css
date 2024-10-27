@@ -48,6 +48,7 @@ body {
 
     .downvote:hover {
         border: 2px solid white; /* Square border color */
+<<<<<<< HEAD
         background-color: ghostwhite; /* Optional: Add a subtle red background on hover */
         
     }
@@ -61,3 +62,8 @@ body {
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: a slight shadow for more emphasis */
     }
 
+=======
+        background-color: ghostwhite; /* Optional: Add a subtle red background on hover *
+        
+    }
+>>>>>>> master
