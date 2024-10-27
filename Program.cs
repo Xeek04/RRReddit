@@ -1,8 +1,19 @@
+using RRReddit.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddSingleton<MongoDatabase>();
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+//Add Sessions
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromSeconds(20);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
 
 var app = builder.Build();
 
@@ -14,6 +25,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.UseSession();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
