@@ -142,7 +142,7 @@
 
             <h5>Rules</h5>
             <ul>
-                <li>Wands, swords, and dragons are always welcome—no posts too fantastical.l</li>
+                <li>Wands, swords, and dragons are always welcome—no posts too fantastical.</li>
                 <li>Discussing a movie’s lore? Please reference the ancient texts (or IMDb) for accuracy.</li>
                 <li>Follow general subreddit rules</li>
             </ul>
@@ -183,31 +183,91 @@
         var joinButton = document.getElementById("joinButton");
         var toastJoin = new bootstrap.Toast(document.getElementById("toastJoin"));
         var toastLeave = new bootstrap.Toast(document.getElementById("toastLeave"));
+        var subredditName = "r/Fantasy";
+        var userSubreddits = []; // hold the user's joined subreddits
 
-        //after getting join button id can add click event listener to it
-        joinButton.addEventListener("click", function() {
-            //toggling between join/joined
-            if (joinButton.textContent === "Join") {
-                joinButton.textContent = "Joined";
-                joinButton.classList.add("joined"); //adds the .joined class from <style>
-                showToast(true);
+        // Fetch the initial list of joined subreddits
+        function fetchJoinedSubreddits() {
+            fetch('/Home/GetJoinedSubreddits')
+                .then(response => response.json())
+                .then(data => {
+                    //if get empty message that means empty list and vise versa
+                    userSubreddits = (data[0] === "Your not apart of any yet... Join some Subreddits!!") ? [] : data;
+                    updateButtonState(); //set initial button state
+                })
+                .catch(error => console.error('Error fetching subreddits:', error));
+        }
 
+        //function that checks if already joined. if so, update the button to "joined"
+        function updateButtonState() {
+            if (userSubreddits.includes(subredditName)) {
+                joinButton.textContent = 'Joined';
+                joinButton.classList.add("joined");
             } else {
-                joinButton.textContent = "Join";
+                joinButton.textContent = 'Join';
                 joinButton.classList.remove("joined");
-                showToast(false);
             }
-        }); //if else stament is inside function()
+        }
+
+        //Handle button clicks for joining/unjoining... kept console logs in for error handling
+        joinButton.addEventListener('click', function () {
+            var action = userSubreddits.includes(subredditName) ? 'unjoin' : 'join';
+
+            //these logs go into view console, not server console. they get called with joined button
+            console.log("Initial subreddits list:", userSubreddits);
+
+            // Update the local list in memory
+            if (action === 'join') {
+                userSubreddits.push(subredditName);
+                console.log(`Added ${subredditName} to list`);
+            } else {
+                // Filter out the subreddit if action is unjoin
+                userSubreddits = userSubreddits.filter(sub => sub !== subredditName);
+                console.log(`Removed ${subredditName} from list`);
+            }
+
+            console.log("Final subreddits list:", userSubreddits);
+
+            //button and toast handling
+            updateButtonState();
+            showToast(action === 'join'); //will pass either true or false
+
+            //save updated list to server now
+            saveSubreddits(action);
+        });
 
 
-        //function for showing correct notifications
-        function showToast(x) {
-            if (x) {
+        // Function to send the updated list to the server
+        function saveSubreddits() {
+            const updatedSubredditsString = userSubreddits.length > 0 ? userSubreddits.join(', ') : "Your not apart of any yet... Join some Subreddits!!";
+
+            fetch('/Home/UpdateSubredditStatus', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ updatedSubreddits: updatedSubredditsString }) //updatedSubreddits is in UserModel, important variable
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log("Updated subreddits:", data);
+
+                })
+                .catch(error => console.error('Error saving subreddits:', error));
+        }
+
+
+        //function for toast notifications
+        function showToast(joined) {
+            if (joined) {
                 toastJoin.show();
             } else {
                 toastLeave.show();
             }
         }
+
+        // Fetch the initial list when the page loads
+        document.addEventListener('DOMContentLoaded', fetchJoinedSubreddits);
+
+
 
     </script>
 
