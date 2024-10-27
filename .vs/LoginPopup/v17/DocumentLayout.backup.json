@@ -1,58 +1,58 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\",
+  "WorkspaceRootPath": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoginPopup\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\senmi\\onedrive\\desktop\\csc403\\rrreddit\\loginpopup\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Controllers\\HomeController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoginPopup\\Controllers\\HomeController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\senmi\\onedrive\\desktop\\csc403\\rrreddit\\loginpopup\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Home\\AccountPage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoginPopup\\Views\\Home\\AccountPage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\senmi\\onedrive\\desktop\\csc403\\rrreddit\\loginpopup\\wwwroot\\js\\comment.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\wwwroot\\js\\comment.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Home\\Button.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoginPopup\\Views\\Home\\Button.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\senmi\\onedrive\\desktop\\csc403\\rrreddit\\loginpopup\\views\\home\\subreddit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\views\\home\\subreddit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Shared\\_Layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoginPopup\\Views\\Shared\\_Layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\senmi\\onedrive\\desktop\\csc403\\rrreddit\\loginpopup\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Home\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoginPopup\\Views\\Home\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\senmi\\onedrive\\desktop\\csc403\\rrreddit\\loginpopup\\views\\home\\button.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\views\\home\\button.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Models\\ErrorViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoginPopup\\Models\\ErrorViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\senmi\\onedrive\\desktop\\csc403\\rrreddit\\loginpopup\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Models\\LoginModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoginPopup\\Models\\LoginModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\senmi\\onedrive\\desktop\\csc403\\rrreddit\\loginpopup\\views\\home\\explore.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\views\\home\\explore.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoginPopup\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\senmi\\onedrive\\desktop\\csc403\\rrreddit\\loginpopup\\views\\home\\testing.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\views\\home\\testing.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Home\\Explore.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoginPopup\\Views\\Home\\Explore.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\senmi\\onedrive\\desktop\\csc403\\rrreddit\\loginpopup\\views\\shared\\_commentsection.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\views\\shared\\_commentsection.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Home\\Testpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoginPopup\\Views\\Home\\Testpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\senmi\\onedrive\\desktop\\csc403\\rrreddit\\loginpopup\\views\\home\\accountpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\views\\home\\accountpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Home\\Subreddit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoginPopup\\Views\\Home\\Subreddit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\senmi\\onedrive\\desktop\\csc403\\rrreddit\\loginpopup\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Models\\ErrorModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoginPopup\\Models\\ErrorModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\senmi\\onedrive\\desktop\\csc403\\rrreddit\\loginpopup\\models\\errormodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\models\\errormodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -79,34 +79,119 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "LoginPopup\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "LoginPopup\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAUwEIAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-10-23T20:15:05.05Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "LoginPopup\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "LoginPopup\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAAAKIAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-16T17:03:02.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Testing.cshtml",
+              "DocumentMoniker": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\Views\\Home\\Testing.cshtml",
+              "RelativeDocumentMoniker": "LoginPopup\\Views\\Home\\Testing.cshtml",
+              "ToolTip": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\Views\\Home\\Testing.cshtml",
+              "RelativeToolTip": "LoginPopup\\Views\\Home\\Testing.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAEsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-21T19:30:31.827Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "comment.js",
+              "DocumentMoniker": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\wwwroot\\js\\comment.js",
+              "RelativeDocumentMoniker": "LoginPopup\\wwwroot\\js\\comment.js",
+              "ToolTip": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\wwwroot\\js\\comment.js",
+              "RelativeToolTip": "LoginPopup\\wwwroot\\js\\comment.js",
+              "ViewState": "AgIAABUAAAAAAAAAAAAIwDIAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-10-23T19:51:26.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_CommentSection.cshtml",
+              "DocumentMoniker": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\Views\\Shared\\_CommentSection.cshtml",
+              "RelativeDocumentMoniker": "LoginPopup\\Views\\Shared\\_CommentSection.cshtml",
+              "ToolTip": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\Views\\Shared\\_CommentSection.cshtml",
+              "RelativeToolTip": "LoginPopup\\Views\\Shared\\_CommentSection.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-23T18:25:14.681Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Subreddit.cshtml",
+              "DocumentMoniker": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\Views\\Home\\Subreddit.cshtml",
+              "RelativeDocumentMoniker": "LoginPopup\\Views\\Home\\Subreddit.cshtml",
+              "ToolTip": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\Views\\Home\\Subreddit.cshtml",
+              "RelativeToolTip": "LoginPopup\\Views\\Home\\Subreddit.cshtml",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAAHAAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-23T19:49:48.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Explore.cshtml",
+              "DocumentMoniker": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\Views\\Home\\Explore.cshtml",
+              "RelativeDocumentMoniker": "LoginPopup\\Views\\Home\\Explore.cshtml",
+              "ToolTip": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\Views\\Home\\Explore.cshtml",
+              "RelativeToolTip": "LoginPopup\\Views\\Home\\Explore.cshtml",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAAAEAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-16T17:05:27.995Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "LoginPopup\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "LoginPopup\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAFsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-16T19:23:32.479Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Controllers\\HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "LoginPopup\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\Controllers\\HomeController.cs",
               "RelativeToolTip": "LoginPopup\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAowFIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAI8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-16T19:15:47.591Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AccountPage.cshtml",
-              "DocumentMoniker": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Home\\AccountPage.cshtml",
-              "RelativeDocumentMoniker": "LoginPopup\\Views\\Home\\AccountPage.cshtml",
-              "ToolTip": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Home\\AccountPage.cshtml",
-              "RelativeToolTip": "LoginPopup\\Views\\Home\\AccountPage.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-16T19:14:15.309Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Button.cshtml",
-              "DocumentMoniker": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Home\\Button.cshtml",
+              "DocumentMoniker": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\Views\\Home\\Button.cshtml",
               "RelativeDocumentMoniker": "LoginPopup\\Views\\Home\\Button.cshtml",
-              "ToolTip": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Home\\Button.cshtml",
+              "ToolTip": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\Views\\Home\\Button.cshtml",
               "RelativeToolTip": "LoginPopup\\Views\\Home\\Button.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -114,23 +199,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "LoginPopup\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "LoginPopup\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAGsAAAAAAAAAAADgv5QAAAAdAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "AccountPage.cshtml",
+              "DocumentMoniker": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\Views\\Home\\AccountPage.cshtml",
+              "RelativeDocumentMoniker": "LoginPopup\\Views\\Home\\AccountPage.cshtml",
+              "ToolTip": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\Views\\Home\\AccountPage.cshtml",
+              "RelativeToolTip": "LoginPopup\\Views\\Home\\AccountPage.cshtml",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAAHwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-16T17:03:02.467Z"
+              "WhenOpened": "2024-10-16T19:14:15.309Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\Program.cs",
               "RelativeDocumentMoniker": "LoginPopup\\Program.cs",
-              "ToolTip": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Program.cs",
+              "ToolTip": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\Program.cs",
               "RelativeToolTip": "LoginPopup\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -138,95 +223,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "LoginPopup\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "LoginPopup\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-16T19:23:32.479Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Models\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "LoginPopup\\Models\\ErrorViewModel.cs",
-              "ToolTip": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Models\\ErrorViewModel.cs",
-              "RelativeToolTip": "LoginPopup\\Models\\ErrorViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T00:44:25.849Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LoginModel.cs",
-              "DocumentMoniker": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Models\\LoginModel.cs",
-              "RelativeDocumentMoniker": "LoginPopup\\Models\\LoginModel.cs",
-              "ToolTip": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Models\\LoginModel.cs",
-              "RelativeToolTip": "LoginPopup\\Models\\LoginModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAC3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T00:44:30.405Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "site.js",
-              "DocumentMoniker": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\wwwroot\\js\\site.js",
-              "RelativeDocumentMoniker": "LoginPopup\\wwwroot\\js\\site.js",
-              "ToolTip": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\wwwroot\\js\\site.js",
-              "RelativeToolTip": "LoginPopup\\wwwroot\\js\\site.js",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAACwAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-10-16T16:53:00.469Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Explore.cshtml",
-              "DocumentMoniker": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Home\\Explore.cshtml",
-              "RelativeDocumentMoniker": "LoginPopup\\Views\\Home\\Explore.cshtml",
-              "ToolTip": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Home\\Explore.cshtml",
-              "RelativeToolTip": "LoginPopup\\Views\\Home\\Explore.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-16T17:05:27.995Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Testpage.cshtml",
-              "DocumentMoniker": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Home\\Testpage.cshtml",
-              "RelativeDocumentMoniker": "LoginPopup\\Views\\Home\\Testpage.cshtml",
-              "ToolTip": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Home\\Testpage.cshtml",
-              "RelativeToolTip": "LoginPopup\\Views\\Home\\Testpage.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-16T20:10:45.07Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Subreddit.cshtml",
-              "DocumentMoniker": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Home\\Subreddit.cshtml",
-              "RelativeDocumentMoniker": "LoginPopup\\Views\\Home\\Subreddit.cshtml",
-              "ToolTip": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Home\\Subreddit.cshtml",
-              "RelativeToolTip": "LoginPopup\\Views\\Home\\Subreddit.cshtml",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAJoAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-16T19:23:38.728Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 12,
               "Title": "ErrorModel.cs",
-              "DocumentMoniker": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Models\\ErrorModel.cs",
+              "DocumentMoniker": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\Models\\ErrorModel.cs",
               "RelativeDocumentMoniker": "LoginPopup\\Models\\ErrorModel.cs",
-              "ToolTip": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Models\\ErrorModel.cs",
+              "ToolTip": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\Models\\ErrorModel.cs",
               "RelativeToolTip": "LoginPopup\\Models\\ErrorModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

@@ -101,7 +101,18 @@ namespace LoginPopup.Controllers
             return View();
         }
 
+        public IActionResult Testing()  //controller for the Comment Testing by Senmi 
+        {
+            return View();
+        }
+
         public IActionResult Button()
+        {
+            return View();
+        }
+
+
+        public IActionResult Watchlist()
         {
             return View();
         }

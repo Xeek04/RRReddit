@@ -147,6 +147,22 @@
                                 <i class="bi bi-person-circle"></i> Test
                             </a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Testing">
+                                <i class="bi bi-person"></i> Comment Testing
+                            </a>
+                        </li>
+
+                        @if(isAuthenticated)
+                        {
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Watchlist">
+                                <i class="bi bi-bookmark-heart"></i> Watchlist
+                            </a>
+                        </li>
+                        }
+
                         <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                             <ul class="navbar-nav ms-auto">
                                 @if (isAuthenticated)
@@ -267,6 +283,8 @@
     @await RenderSectionAsync("Scripts", required: false)
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/js/comment.js"></script>    <!-- for the comment javascript -->
 
 </body>
 </html>
