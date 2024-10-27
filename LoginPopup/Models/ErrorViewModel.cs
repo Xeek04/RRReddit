@@ -1,4 +1,4 @@
-namespace RRReddit.Models
+namespace LoginPopup.Models
 {
     public class ErrorViewModel
     {
