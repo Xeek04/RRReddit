@@ -1,58 +1,94 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\",
+  "WorkspaceRootPath": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\zachb\\source\\repos\\xeek04\\loginpopup\\loginpopup\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\zachb\\source\\repos\\xeek04\\loginpopup\\loginpopup\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\zachb\\source\\repos\\xeek04\\loginpopup\\loginpopup\\views\\home\\accountpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\coby taylor\\desktop\\all programming\\la tech programming\\software engineering and design\\rrreddit\\loginpopup\\views\\home\\accountpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\views\\home\\accountpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\zachb\\source\\repos\\xeek04\\loginpopup\\loginpopup\\views\\home\\button.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\views\\home\\button.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\coby taylor\\desktop\\all programming\\la tech programming\\software engineering and design\\rrreddit\\loginpopup\\views\\home\\info.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\views\\home\\info.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\zachb\\source\\repos\\xeek04\\loginpopup\\loginpopup\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\coby taylor\\desktop\\all programming\\la tech programming\\software engineering and design\\rrreddit\\loginpopup\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\coby taylor\\desktop\\all programming\\la tech programming\\software engineering and design\\rrreddit\\loginpopup\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\coby taylor\\desktop\\all programming\\la tech programming\\software engineering and design\\rrreddit\\loginpopup\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\coby taylor\\desktop\\all programming\\la tech programming\\software engineering and design\\rrreddit\\loginpopup\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\zachb\\source\\repos\\xeek04\\loginpopup\\loginpopup\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\zachb\\source\\repos\\xeek04\\loginpopup\\loginpopup\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\zachb\\source\\repos\\xeek04\\loginpopup\\loginpopup\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\zachb\\source\\repos\\xeek04\\loginpopup\\loginpopup\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\zachb\\source\\repos\\xeek04\\loginpopup\\loginpopup\\views\\home\\explore.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\views\\home\\explore.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\zachb\\source\\repos\\xeek04\\loginpopup\\loginpopup\\views\\home\\testpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\coby taylor\\desktop\\all programming\\la tech programming\\software engineering and design\\rrreddit\\loginpopup\\views\\home\\testpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\views\\home\\testpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\zachb\\source\\repos\\xeek04\\loginpopup\\loginpopup\\views\\home\\subreddit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\coby taylor\\desktop\\all programming\\la tech programming\\software engineering and design\\rrreddit\\loginpopup\\views\\post\\createpost.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\views\\post\\createpost.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\coby taylor\\desktop\\all programming\\la tech programming\\software engineering and design\\rrreddit\\loginpopup\\views\\post\\postpreview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\views\\post\\postpreview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\coby taylor\\desktop\\all programming\\la tech programming\\software engineering and design\\rrreddit\\loginpopup\\views\\post\\indexpost.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\views\\post\\indexpost.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\coby taylor\\desktop\\all programming\\la tech programming\\software engineering and design\\rrreddit\\loginpopup\\views\\post\\detailspost.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\views\\post\\detailspost.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\coby taylor\\desktop\\all programming\\la tech programming\\software engineering and design\\rrreddit\\loginpopup\\views\\post\\deletepost.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\views\\post\\deletepost.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\coby taylor\\desktop\\all programming\\la tech programming\\software engineering and design\\rrreddit\\loginpopup\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\coby taylor\\desktop\\all programming\\la tech programming\\software engineering and design\\rrreddit\\loginpopup\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\coby taylor\\desktop\\all programming\\la tech programming\\software engineering and design\\rrreddit\\loginpopup\\views\\home\\button.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\views\\home\\button.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\coby taylor\\desktop\\all programming\\la tech programming\\software engineering and design\\rrreddit\\loginpopup\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\coby taylor\\desktop\\all programming\\la tech programming\\software engineering and design\\rrreddit\\loginpopup\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\coby taylor\\desktop\\all programming\\la tech programming\\software engineering and design\\rrreddit\\loginpopup\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\coby taylor\\desktop\\all programming\\la tech programming\\software engineering and design\\rrreddit\\loginpopup\\views\\home\\explore.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\views\\home\\explore.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\coby taylor\\desktop\\all programming\\la tech programming\\software engineering and design\\rrreddit\\loginpopup\\views\\home\\subreddit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\views\\home\\subreddit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\zachb\\source\\repos\\xeek04\\loginpopup\\loginpopup\\models\\errormodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\coby taylor\\desktop\\all programming\\la tech programming\\software engineering and design\\rrreddit\\loginpopup\\models\\errormodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\models\\errormodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|c:\\users\\coby taylor\\desktop\\all programming\\la tech programming\\software engineering and design\\rrreddit\\loginpopup\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{350AC5CC-12E9-400B-A317-1826BC9785DE}|LoginPopup\\LoginPopup.csproj|solutionrelative:loginpopup\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,15 +98,108 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Info.cshtml",
+              "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Home\\Info.cshtml",
+              "RelativeDocumentMoniker": "LoginPopup\\Views\\Home\\Info.cshtml",
+              "ToolTip": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Home\\Info.cshtml",
+              "RelativeToolTip": "LoginPopup\\Views\\Home\\Info.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-27T23:44:36.93Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IndexPost.cshtml",
+              "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Post\\IndexPost.cshtml",
+              "RelativeDocumentMoniker": "LoginPopup\\Views\\Post\\IndexPost.cshtml",
+              "ToolTip": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Post\\IndexPost.cshtml",
+              "RelativeToolTip": "LoginPopup\\Views\\Post\\IndexPost.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-27T23:42:40.259Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DetailsPost.cshtml",
+              "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Post\\DetailsPost.cshtml",
+              "RelativeDocumentMoniker": "LoginPopup\\Views\\Post\\DetailsPost.cshtml",
+              "ToolTip": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Post\\DetailsPost.cshtml",
+              "RelativeToolTip": "LoginPopup\\Views\\Post\\DetailsPost.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-27T23:42:37.595Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DeletePost.cshtml",
+              "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Post\\DeletePost.cshtml",
+              "RelativeDocumentMoniker": "LoginPopup\\Views\\Post\\DeletePost.cshtml",
+              "ToolTip": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Post\\DeletePost.cshtml",
+              "RelativeToolTip": "LoginPopup\\Views\\Post\\DeletePost.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-27T23:42:35.572Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Testpage.cshtml",
+              "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Home\\Testpage.cshtml",
+              "RelativeDocumentMoniker": "LoginPopup\\Views\\Home\\Testpage.cshtml",
+              "ToolTip": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Home\\Testpage.cshtml",
+              "RelativeToolTip": "LoginPopup\\Views\\Home\\Testpage.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-16T20:10:45.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "LoginPopup\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "LoginPopup\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFEBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-16T17:03:02.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PostController.cs",
+              "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Controllers\\PostController.cs",
+              "RelativeDocumentMoniker": "LoginPopup\\Controllers\\PostController.cs",
+              "ToolTip": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Controllers\\PostController.cs",
+              "RelativeToolTip": "LoginPopup\\Controllers\\PostController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAiwFcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T23:32:23.22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountPage.cshtml",
+              "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Home\\AccountPage.cshtml",
+              "RelativeDocumentMoniker": "LoginPopup\\Views\\Home\\AccountPage.cshtml",
+              "ToolTip": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Home\\AccountPage.cshtml",
+              "RelativeToolTip": "LoginPopup\\Views\\Home\\AccountPage.cshtml",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAHgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-16T19:14:15.309Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -78,35 +207,95 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Controllers\\HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "LoginPopup\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Controllers\\HomeController.cs",
               "RelativeToolTip": "LoginPopup\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAowFIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAiwL4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-16T19:15:47.591Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AccountPage.cshtml",
-              "DocumentMoniker": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Home\\AccountPage.cshtml",
-              "RelativeDocumentMoniker": "LoginPopup\\Views\\Home\\AccountPage.cshtml",
-              "ToolTip": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Home\\AccountPage.cshtml",
-              "RelativeToolTip": "LoginPopup\\Views\\Home\\AccountPage.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-16T19:14:15.309Z"
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Program.cs",
+              "RelativeDocumentMoniker": "LoginPopup\\Program.cs",
+              "ToolTip": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Program.cs",
+              "RelativeToolTip": "LoginPopup\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T17:02:49.683Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
+              "Title": "PostPreview.cshtml",
+              "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Post\\PostPreview.cshtml",
+              "RelativeDocumentMoniker": "LoginPopup\\Views\\Post\\PostPreview.cshtml",
+              "ToolTip": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Post\\PostPreview.cshtml",
+              "RelativeToolTip": "LoginPopup\\Views\\Post\\PostPreview.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-27T23:42:42.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CreatePost.cshtml",
+              "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Post\\CreatePost.cshtml",
+              "RelativeDocumentMoniker": "LoginPopup\\Views\\Post\\CreatePost.cshtml",
+              "ToolTip": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Post\\CreatePost.cshtml",
+              "RelativeToolTip": "LoginPopup\\Views\\Post\\CreatePost.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-27T23:42:44.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "LoginPopup\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "LoginPopup\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-27T23:42:33.527Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "LoginPopup\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "LoginPopup\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-10-27T23:37:04.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "LoginPopup\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "LoginPopup\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-10-27T23:38:41.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "Button.cshtml",
-              "DocumentMoniker": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Home\\Button.cshtml",
+              "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Home\\Button.cshtml",
               "RelativeDocumentMoniker": "LoginPopup\\Views\\Home\\Button.cshtml",
-              "ToolTip": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Home\\Button.cshtml",
+              "ToolTip": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Home\\Button.cshtml",
               "RelativeToolTip": "LoginPopup\\Views\\Home\\Button.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -114,36 +303,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "LoginPopup\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "LoginPopup\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAGsAAAAAAAAAAADgv5QAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-16T17:03:02.467Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Program.cs",
-              "RelativeDocumentMoniker": "LoginPopup\\Program.cs",
-              "ToolTip": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Program.cs",
-              "RelativeToolTip": "LoginPopup\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T17:02:49.683Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 15,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Home\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "LoginPopup\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "LoginPopup\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -151,11 +315,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 16,
               "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Models\\ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "LoginPopup\\Models\\ErrorViewModel.cs",
-              "ToolTip": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Models\\ErrorViewModel.cs",
               "RelativeToolTip": "LoginPopup\\Models\\ErrorViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -163,11 +327,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 17,
               "Title": "LoginModel.cs",
-              "DocumentMoniker": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Models\\LoginModel.cs",
+              "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Models\\LoginModel.cs",
               "RelativeDocumentMoniker": "LoginPopup\\Models\\LoginModel.cs",
-              "ToolTip": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Models\\LoginModel.cs",
+              "ToolTip": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Models\\LoginModel.cs",
               "RelativeToolTip": "LoginPopup\\Models\\LoginModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAC3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -175,23 +339,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "site.js",
-              "DocumentMoniker": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\wwwroot\\js\\site.js",
-              "RelativeDocumentMoniker": "LoginPopup\\wwwroot\\js\\site.js",
-              "ToolTip": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\wwwroot\\js\\site.js",
-              "RelativeToolTip": "LoginPopup\\wwwroot\\js\\site.js",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAACwAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-10-16T16:53:00.469Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 18,
               "Title": "Explore.cshtml",
-              "DocumentMoniker": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Home\\Explore.cshtml",
+              "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Home\\Explore.cshtml",
               "RelativeDocumentMoniker": "LoginPopup\\Views\\Home\\Explore.cshtml",
-              "ToolTip": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Home\\Explore.cshtml",
+              "ToolTip": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Home\\Explore.cshtml",
               "RelativeToolTip": "LoginPopup\\Views\\Home\\Explore.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -199,23 +351,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Testpage.cshtml",
-              "DocumentMoniker": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Home\\Testpage.cshtml",
-              "RelativeDocumentMoniker": "LoginPopup\\Views\\Home\\Testpage.cshtml",
-              "ToolTip": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Home\\Testpage.cshtml",
-              "RelativeToolTip": "LoginPopup\\Views\\Home\\Testpage.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-16T20:10:45.07Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 19,
               "Title": "Subreddit.cshtml",
-              "DocumentMoniker": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Home\\Subreddit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Home\\Subreddit.cshtml",
               "RelativeDocumentMoniker": "LoginPopup\\Views\\Home\\Subreddit.cshtml",
-              "ToolTip": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Views\\Home\\Subreddit.cshtml",
+              "ToolTip": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Views\\Home\\Subreddit.cshtml",
               "RelativeToolTip": "LoginPopup\\Views\\Home\\Subreddit.cshtml",
               "ViewState": "AgIAAD8AAAAAAAAAAAAAAJoAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -223,11 +363,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 20,
               "Title": "ErrorModel.cs",
-              "DocumentMoniker": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Models\\ErrorModel.cs",
+              "DocumentMoniker": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Models\\ErrorModel.cs",
               "RelativeDocumentMoniker": "LoginPopup\\Models\\ErrorModel.cs",
-              "ToolTip": "C:\\Users\\zachb\\source\\repos\\Xeek04\\LoginPopup\\LoginPopup\\Models\\ErrorModel.cs",
+              "ToolTip": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\Models\\ErrorModel.cs",
               "RelativeToolTip": "LoginPopup\\Models\\ErrorModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
