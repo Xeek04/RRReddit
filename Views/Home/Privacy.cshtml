@@ -1,6 +1,211 @@
-﻿@{
-    ViewData["Title"] = "Privacy Policy";
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subreddit Template</title>
+
+    <!-- Bootstrap CSS (optional for styling) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+
+        body {
+            background-color: #f6f7f8; /* white */
+        }
+
+        .account-header {
+            background-color: green;
+            color: white;
+            padding: 20px;
+            margin-left: 110px; /*shift left*/
+        }
+
+        .subreddit-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .create-post-button {
+            margin-top: 10px;
+            margin-right: 20px;
+        }
+
+        .Overview-button {
+            margin-top: 10px;
+            margin-right: 20px;
+        }
+
+        .comments-button {
+            margin-top: 10px;
+            margin-right: 20px;
+        }
+
+        .saved-button {
+            margin-top: 10px;
+            margin-right: 20px;
+        }
+
+        .hidden-button {
+            margin-top: 10px;
+            margin-right: 20px;
+        }
+
+        .upvoted-button {
+            margin-top: 10px;
+            margin-right: 20px;
+        }
+
+        .downvoted-button {
+            margin-top: 10px;
+            margin-right: 20px;
+        }
+
+        .subreddit-button {
+            margin-top: 10px;
+            margin-right: 20px;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 100px; /* Shifted content area right to make room for the left sidebar */
+        }
+
+        /* for placeholder cards */
+        .content-area {
+            flex: 0 0 65%;
+            padding: 20px;
+        }
+
+        /* right most side bar */
+        .sidebar {
+            flex: 0 0 30%;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-left: 20px;
+        }
+
+            .sidebar h5 {
+                font-weight: bold;
+                color: #333; /* black */
+            }
+
+            .sidebar p {
+                font-size: 0.9rem;
+            }
+
+        .card {
+            background-color: white;
+            border: none;
+            margin-bottom: 15px;
+            padding: 20px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <!-- Subreddit Header -->
+    <div class="account-header">
+        <div class="container">
+            <h1 class="account-title">@ViewData["AccountName"]'s account page</h1>
+
+            <button class="btn btn-light create-post-button">Posts</button>
+
+            <!--button that trigger subreddits modal -->
+            <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#subredditsModal" id="fetchSubreddits">
+                View Joined Subreddits
+            </button>
+
+
+            <button class="btn btn-light Overview-button">Overview</button>
+            <button class="btn btn-light comments-button">Comments</button>
+            <button class="btn btn-light saved-button">Saved</button>
+            <button class="btn btn-light hidden-button">Hidden</button>
+            <button class="btn btn-light upvoted-button">Upvoted</button>
+            <button class="btn btn-light downvoted-button">Downvoted</button>
+
+            
+
+
+
+        </div>
+    </div>
+
+
+
+    <!-- Modal for displaying the joined subreddits -->
+    <div class="modal fade" id="subredditsModal" tabindex="-1" aria-labelledby="subredditsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="subredditsModalLabel">Joined Subreddits</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul id="subredditsList" class="list-group">
+                        <!-- code in javaScript will insert list items here -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Bootstrap JS (optional for functionality like collapsible elements) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- JavaScript for subreddit listing -->
+    <script>
+        //varibale to save list from database
+        var joinedSubreddits = [];
+
+        //Function to dynamically update the list of subreddits in the modal
+        function updateSubredditList() {
+            var subredditsList = document.getElementById('subredditsList');
+            subredditsList.innerHTML = ''; //clear existing items
+
+            // Dynamically create list items based on the array
+            joinedSubreddits.forEach(function (subreddit) {
+                var listItem = document.createElement('li');
+                listItem.textContent = subreddit;
+                listItem.classList.add('list-group-item'); //adds Bootstrap styling
+                subredditsList.appendChild(listItem);
+            });
+        }
+
+        // AJAX to fetch subreddits from the server when the "View Joined Subreddits" button is clicked
+        document.getElementById('fetchSubreddits').addEventListener('click', function () {
+            fetch('/Home/GetSubreddits') // actual controller's route
+                .then(response => response.json())
+                .then(data => {
+                    //update the joinedSubreddits variable with data from the server
+                    joinedSubreddits = data;
+
+                    //update the modal content
+                    updateSubredditList();
+                })
+                .catch(error => console.error('Error fetching subreddits:', error));
+        });
+
+        // Update the list when the modal is shown
+        document.getElementById('subredditsModal').addEventListener('shown.bs.modal', updateSubredditList);
+    </script>
+
+
+</body>
+</html>
