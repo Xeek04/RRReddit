@@ -1,0 +1,12 @@
+﻿@model LoginPopup.Models.Post
+
+<h2>@ViewData["AccountName"]'s Posts</h2>
+<h2>@Model.Title</h2>
+<p>@Model.Content</p>
+
+<p><strong>Created At:</strong> @Model.CreatedAt</p>
+
+<!-- Add the like/dislike buttons here -->
+@await Html.PartialAsync("~/Views/Shared/Button.cshtml", Model)
+
+<a asp-action="Index">Back to All Posts</a>

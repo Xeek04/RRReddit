@@ -1,0 +1,17 @@
+﻿@model IEnumerable<LoginPopup.Models.Post>
+
+
+
+@foreach (var post in Model)
+{
+    <div class="post" id="post-@post.Id">
+        <span>@post.GetTimeAgo()</span>
+        <h3>
+            <a asp-action="Details" asp-route-id="@post.Id">@post.Title</a>
+        </h3>
+        <p>@post.GetPreview(100)</p> <!-- Show first 100 characters -->
+     
+    </div>
+}
+
+<a asp-action="Create" class="btn btn-primary">Create New Post</a>
