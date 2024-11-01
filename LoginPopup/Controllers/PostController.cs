@@ -1,21 +1,35 @@
 ﻿using LoginPopup.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting;
+using MongoDB.Driver;
+using RRReddit.Models;
+using RRReddit.Data;
 
 public class PostController : Controller
 {
     private static List<Post> _posts = new List<Post>();
+    private readonly IMongoCollection<Post>? _postsCollection;
+    private readonly IMongoCollection<Comment>? _comments;
+
+    public PostController(MongoDatabase mongoDatabase)
+    {
+        _postsCollection = mongoDatabase.Database?.GetCollection<Post>("posts");
+        _comments = mongoDatabase.Database?.GetCollection<Comment>("comments");
+    }
 
     // GET: Show the form to create a new post
     [HttpGet]
-    public IActionResult Create()
+    public IActionResult Create(string subredditName)
     {
-        return View("CreatePost");
+        var post = new Post
+        {
+            SubredditName = subredditName
+        };
+        return View("CreatePost", post);
     }
-
     // POST: Save the new post
     [HttpPost]
-    public IActionResult Create(Post post)
+    public async Task<IActionResult> Create(Post post)
     {
         if (!ModelState.IsValid)
         {
@@ -23,11 +37,27 @@ public class PostController : Controller
         }
 
         // Adding the post to the list of posts
+        post.Id = DataStore.Posts.Count > 0 ? DataStore.Posts.Max(p => p.Id) + 1 : 1;
         post.Id = _posts.Count > 0 ? _posts.Max(p => p.Id) + 1 : 1;
         post.CreatedAt = DateTime.Now;
         _posts.Add(post);
+        DataStore.Posts.Add(post);
 
-        return RedirectToAction("Index");
+        // Add post to database
+        await _postsCollection.InsertOneAsync(post);
+
+        // Redirect back to the subreddit page
+        return RedirectToAction(post.SubredditName, "Home");
+    }
+
+    // GET: Return posts in subreddit
+    public async Task<IActionResult> SubPosts(string subRedditName)
+    {
+        var filter = Builders<Post>.Filter.Eq(Post => Post.SubredditName, subRedditName);
+
+        var result = await _postsCollection.Find(filter).ToListAsync();
+
+        return RedirectToAction(subRedditName, "Home");
     }
 
     // GET: Show list of all posts
@@ -50,6 +80,15 @@ public class PostController : Controller
     // GET: Show details of a specific post
     public IActionResult Details(int id)
     {
+        var email = HttpContext.Session.GetString("UserEmail");
+
+        if (!string.IsNullOrEmpty(email))
+        {
+            // Extract the name from the email (everything before '@')
+            var name = email.Split('@')[0];
+
+            ViewData["AccountName"] = name;
+        }
         var post = _posts.FirstOrDefault(p => p.Id == id);
         if (post == null)
         {
@@ -81,7 +120,7 @@ public class PostController : Controller
             _posts.Remove(post);
         }
 
-        return RedirectToAction("Index");
+        return RedirectToAction(post.SubredditName, "Home");
     }
 
 }

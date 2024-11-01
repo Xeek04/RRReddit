@@ -1,4 +1,7 @@
-﻿namespace LoginPopup.Models
+﻿using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson;
+
+namespace LoginPopup.Models
 {
     public class Post
     {
@@ -12,9 +15,22 @@
             else
                 return Content.Substring(0, length) + "...";
         }
-        public int Id { get; set; }
+
+        // DO NOT TRY TO SET THIS VARIABLE
+        [BsonId]
+        [BsonElement("_id"), BsonRepresentation(BsonType.ObjectId)]
+        public string? PostId { get; set; }
+
+        //[BsonElement("post_id"), BsonRepresentation(BsonType.Int32)]
+        //public int Id { get; set; }
+
+        [BsonElement("title"), BsonRepresentation(BsonType.String)]
         public string Title { get; set; }
+
+        [BsonElement("content"), BsonRepresentation(BsonType.String)]
         public string Content { get; set; }
+
+        [BsonElement("datetime"), BsonRepresentation(BsonType.DateTime)]
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public string GetTimeAgo()
         {
@@ -35,7 +51,18 @@
             else
                 return $"{(int)(timeSinceCreated.TotalDays / 365)} years ago";
         }
-        public int Likes { get; set; } = 0;     // Add this property
-        public int Dislikes { get; set; } = 0;  // Add this property
+
+        //public int Likes { get; set; } = 0;     // Add this property
+        //public int Dislikes { get; set; } = 0;  // Add this property
+
+        [BsonElement("score"), BsonRepresentation(BsonType.Int32)]
+        public int Score { get; set; } = 0;
+
+        [BsonElement("subreddit"), BsonRepresentation(BsonType.String)]
+        public string SubredditName { get; set; }
+
+        /* Add when username is made available to the controller */
+        //[BsonElement("user"), BsonRepresentation(BsonType.String)]
+        //public string UserName { get; set; }
     }
 }

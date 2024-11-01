@@ -5442,23 +5442,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Coby Taylor\\.nuget\\packages\\": {},
+    "C:\\Users\\activ\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\LoginPopup.csproj",
+      "projectUniqueName": "C:\\Users\\activ\\source\\repos\\RRReddit\\LoginPopup\\LoginPopup.csproj",
       "projectName": "LoginPopup",
-      "projectPath": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\LoginPopup.csproj",
-      "packagesPath": "C:\\Users\\Coby Taylor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Coby Taylor\\Desktop\\All Programming\\La Tech Programming\\Software Engineering and Design\\RRReddit\\LoginPopup\\obj\\",
+      "projectPath": "C:\\Users\\activ\\source\\repos\\RRReddit\\LoginPopup\\LoginPopup.csproj",
+      "packagesPath": "C:\\Users\\activ\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\activ\\source\\repos\\RRReddit\\LoginPopup\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Coby Taylor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\activ\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -5519,7 +5519,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -71,8 +71,11 @@
         <div class="content-area">
             <!-- placeholder cards for now -->
             <div class="card">
+                <form asp-action="GetUsername" method="get">
+                    <button></button>
+                </form>
                 <h5>Post 1</h5>
-                <p>Placeholder post </p>
+                <p>@ViewData["Username"]</p>
             </div>
 
             <div class="card">
