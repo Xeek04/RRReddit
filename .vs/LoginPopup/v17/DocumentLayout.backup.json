@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,6 +62,23 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "LoginPopup\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "LoginPopup\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAL8AAAAAAAAAAAD4v9EAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T01:32:00.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "comment.js",
               "DocumentMoniker": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\wwwroot\\js\\comment.js",
@@ -71,19 +88,6 @@
               "ViewState": "AgIAAB4AAAAAAAAAAAAYwDUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2024-10-23T19:51:26.37Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "LoginPopup\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\senmi\\OneDrive\\Desktop\\CSC403\\RRReddit\\LoginPopup\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "LoginPopup\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAOMAAAAAAAAAAAD4vwYBAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-28T01:32:00.724Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
