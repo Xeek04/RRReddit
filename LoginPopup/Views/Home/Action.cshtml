@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subreddit Template</title>
+
+    <!-- bootstrap CSS for toast -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f6f7f8; /* white */
+        }
+
+        .subreddit-header {
+            background-color: #0079d3; /* blue */
+            color: white;
+            padding: 20px;
+            margin-left: 110px; /*shift left*/
+        }
+
+        .subreddit-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .create-post-button {
+            margin-top: 10px;
+        }
+
+        .join-button {
+            margin-top: 10px;
+            margin-left: 30px; /* add some spacing between */
+        }
+
+        /* changine between join and joined */
+        .joined {
+            background-color: #28a745 !important; /* green */
+            color: white !important;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 100px; /* shifted content area right to make room for the left sidebar */
+        }
+
+        /* for placeholder cards */
+        .content-area {
+            flex: 0 0 65%;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border: none;
+            margin-bottom: 15px;
+            padding: 20px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* right most sidebar */
+        .sidebar {
+            flex: 0 0 30%;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-left: 20px;
+            height: 400px; /*if want more in sidebar, update this*/
+        }
+
+        .sidebar h5 {
+            font-weight: bold;
+            color: #333; /* black */
+        }
+
+        .sidebar p {
+            font-size: 0.9rem;
+        }
+
+    </style>
+
+
+    <!--toast positioning-->
+    <style>
+        .toast-container {
+            position: fixed;
+            top: 70px; /*in between nav and header*/
+            right: 20px;
+            z-index: 1055; /* higher than nav bar, higher as in "in front" */
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Subreddit Header -->
+    <div class="subreddit-header">
+        <div class="container">
+            <h1 class="subreddit-title">r/@Model.SubredditName</h1>
+
+            <a asp-controller="Post" asp-action="Create" asp-route-subredditName="@Model.SubredditName" class="btn btn-primary">Create Post</a>
+            <button class="btn btn-light join-button" id="joinButton">Join</button>
+        </div>
+    </div>
+
+    <!-- Main Content here -->
+    <div class="container mt-4 main-content">
+
+        <!-- posts area -->
+        <div class="content-area">
+            @foreach (var post in Model.Posts)
+            {
+                <h3>
+                    <a asp-controller="Post" asp-action="Details" asp-route-id="@post.Id">@post.Title</a>
+                </h3>
+                <div class="post-preview" id="post-@post.Id">
+                   
+                    <p>
+                        @post.GetPreview(100)
+                    </p>
+                    <p><small>@post.GetTimeAgo()</small></p>
+
+                    <!-- Link to view the full post with interactions -->
+                  
+
+                </div>
+            }
+        </div>
+
+        <!-- sidebar area -->
+        <div class="sidebar">
+            <h5>About Community</h5>
+            <p>
+                Join the Action community for discussions about adrenaline-fueled films.
+                Explore the world of high-risk stunts, intense battles, and heart-pounding excitement.
+            </p>
+
+            <hr>
+
+            <h5>Rules</h5>
+            <ul>
+                <li>Only praise stunts that defy physics; anything realistic will be politely ignored.</li>
+                <li>Spoilers must be handled like a ticking time bomb—diffuse them with a spoiler warning.</li>
+                <li>Explosions in the movie? Your post needs to match that energy—make it exciting!</li>
+                <li>Follow general subreddit rules</li>
+            </ul>
+
+        </div>
+    </div> <!-- main content ended-->
+
+
+    <!-- toast container area -->
+    <div class="toast-container">
+        <!-- join notification -->
+        <div id="toastJoin" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    You have joined the Action subreddit!
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+
+        <!-- leave notification -->
+        <div id="toastLeave" class="toast align-items-center text-white bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    You have left the Action subreddit.
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS for toast functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        
+        var joinButton = document.getElementById("joinButton");
+        var toastJoin = new bootstrap.Toast(document.getElementById("toastJoin"));
+        var toastLeave = new bootstrap.Toast(document.getElementById("toastLeave"));
+        var subredditName = "r/Action"; 
+        var userSubreddits = []; // hold the user's joined subreddits
+
+        // Fetch the initial list of joined subreddits
+        function fetchJoinedSubreddits() {
+            fetch('/Home/GetJoinedSubreddits')
+                .then(response => response.json())
+                .then(data => {
+                    //if get empty message that means empty list and vise versa
+                    userSubreddits = (data[0] === "Your not apart of any yet... Join some Subreddits!!") ? [] : data;
+                    updateButtonState(); //set initial button state
+                })
+                .catch(error => console.error('Error fetching subreddits:', error));
+        }
+
+        //function that checks if already joined. if so, update the button to "joined"
+        function updateButtonState() {
+            if (userSubreddits.includes(subredditName)) {
+                joinButton.textContent = 'Joined';
+                joinButton.classList.add("joined");
+            } else {
+                joinButton.textContent = 'Join';
+                joinButton.classList.remove("joined");
+            }
+        }
+
+        //Handle button clicks for joining/unjoining... kept console logs in for error handling
+        joinButton.addEventListener('click', function () {
+            var action = userSubreddits.includes(subredditName) ? 'unjoin' : 'join';
+
+            //these logs go into view console, not server console. they get called with joined button
+            console.log("Initial subreddits list:", userSubreddits);
+
+            // Update the local list in memory
+            if (action === 'join') {
+                userSubreddits.push(subredditName);
+                console.log(`Added ${subredditName} to list`);
+            } else {
+                // Filter out the subreddit if action is unjoin
+                userSubreddits = userSubreddits.filter(sub => sub !== subredditName);
+                console.log(`Removed ${subredditName} from list`);
+            }
+
+            console.log("Final subreddits list:", userSubreddits);
+
+            //button and toast handling
+            updateButtonState();
+            showToast(action === 'join'); //will pass either true or false
+
+            //save updated list to server now
+            saveSubreddits(action);
+        });
+
+
+        // Function to send the updated list to the server
+        function saveSubreddits() {
+            const updatedSubredditsString = userSubreddits.length > 0 ? userSubreddits.join(', ') : "Your not apart of any yet... Join some Subreddits!!";
+
+            fetch('/Home/UpdateSubredditStatus', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ updatedSubreddits: updatedSubredditsString }) //updatedSubreddits is in UserModel, important variable
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log("Updated subreddits:", data);
+                    
+                })
+                .catch(error => console.error('Error saving subreddits:', error));
+        }
+
+
+        //function for toast notifications
+        function showToast(joined) {
+            if (joined) {
+                toastJoin.show();
+            } else {
+                toastLeave.show();
+            }
+        }
+
+        // Fetch the initial list when the page loads
+        document.addEventListener('DOMContentLoaded', fetchJoinedSubreddits);
+
+        
+
+    </script>
+
+
+</body>
+</html>

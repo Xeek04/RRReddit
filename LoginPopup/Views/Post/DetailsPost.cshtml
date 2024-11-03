@@ -1,0 +1,30 @@
+﻿@model LoginPopup.Models.Post
+
+<style>
+    /* Adjust main content and card positioning */
+    .main-content {
+        margin-left: 0px; /* Adjust to ensure main content is not overlapped by the sidebar */
+    }
+
+    .card {
+        margin-left: 0px; /* Move the card element slightly to the right */
+        padding: 10px; /* Optional padding for better readability */
+    }
+</style>
+
+<div class="main-content">
+    <h2>@ViewData["AccountName"]'s Posts</h2>
+    <h2>@Model.Title</h2>
+    <p>@Model.Content</p>
+    
+    <p><strong>Created At:</strong> @Model.CreatedAt</p>
+
+    <!-- Add the like/dislike buttons here -->
+    @await Html.PartialAsync("~/Views/Shared/Button.cshtml", Model)
+
+    <div class="card">
+        <!-- Your card content such as comments section -->
+    </div>
+
+    <a asp-action="@Model.SubredditName" asp-controller="Home">Back to All Posts</a>
+</div>

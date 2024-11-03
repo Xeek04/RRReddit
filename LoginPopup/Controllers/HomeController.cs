@@ -29,6 +29,8 @@ namespace LoginPopup.Controllers
             return View();
         }
 
+
+
         public IActionResult Create()
         {
             return View();
@@ -110,6 +112,8 @@ namespace LoginPopup.Controllers
         {
             return View();
         }
+
+       
 
 
         public IActionResult Watchlist()

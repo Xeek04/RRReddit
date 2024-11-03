@@ -78,3 +78,12 @@ body {
         background-color: rgba(0, 121, 211, 0.1);
     }
 
+
+.comment-box {
+    border: 1px solid #ccc; /* Border around the box */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Space inside the box */
+    margin: 5px 0; /* Space between comments */
+    background-color: #f9f9f9; /* Light background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
