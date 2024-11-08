@@ -36,10 +36,14 @@ public class PostController : Controller
             return View("CreatePost", post);
         }
 
+        var email = HttpContext.Session.GetString("UserEmail");
+        var name = email.Split('@')[0];
+
         // Adding the post to the list of posts
         post.Id = DataStore.Posts.Count > 0 ? DataStore.Posts.Max(p => p.Id) + 1 : 1;
         post.Id = _posts.Count > 0 ? _posts.Max(p => p.Id) + 1 : 1;
         post.CreatedAt = DateTime.Now;
+        post.User = name;
         _posts.Add(post);
         DataStore.Posts.Add(post);
 
