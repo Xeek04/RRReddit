@@ -12,6 +12,7 @@ namespace RRReddit.Controllers
         
         private readonly IMongoCollection<DatabaseUser>? _users;
         private readonly IMongoCollection<DatabaseUser>? _subreddits;
+        private readonly IMongoCollection<Post>? _posts; 
 
         public HomeController(ILogger<HomeController> logger, MongoDatabase mongoDatabase)
         {
@@ -19,6 +20,7 @@ namespace RRReddit.Controllers
 
             _users = mongoDatabase.Database?.GetCollection<DatabaseUser>("users");
             _subreddits = mongoDatabase.Database?.GetCollection<DatabaseUser>("subreddits");
+            _posts = mongoDatabase.Database?.GetCollection<Post>("posts");
         }
 
         public IActionResult Index()
@@ -217,6 +219,72 @@ namespace RRReddit.Controllers
         public IActionResult Thriller()
         {
             return View();
+        }
+
+
+        
+        /* here is where messing with array for upvotes and downvotes */
+
+        [HttpGet]
+        public async Task<IActionResult> GetUserUpvotes()
+        {
+            //get user email and then split it to only get name before @
+            var email = HttpContext.Session.GetString("UserEmail");
+            var name = email.Split('@')[0];
+
+            //Query the user by name which is username in database
+            var user = await _users.Find(u => u.UserName == name).FirstOrDefaultAsync();
+
+            if (user != null && user.Upvotes != null && user.Upvotes.Any())
+            {
+                // Fetch the posts corresponding to the ObjectIds in the Upvotes array
+                var filter = Builders<Post>.Filter.In(post => post.PostId, user.Upvotes);
+                var upvotedPosts = await _posts.Find(filter).ToListAsync();      
+
+                //grab the title and content for each post 
+                var result = upvotedPosts.Select(post => new
+                {
+                    PostId = post.PostId.ToString(),
+                    Title = post.Title,
+                    Content = post.Content
+                }).ToList();
+
+                return Json(result); //need as JSON to work with
+            }
+            else
+            {
+                return Json(new List<object>()); //if-else statement handles if no upvotesfound: return an empty list 
+            }
+        }
+
+
+        [HttpGet]
+        public async Task<IActionResult> GetUserDownvotes()
+        {
+            var email = HttpContext.Session.GetString("UserEmail");
+            var name = email.Split('@')[0];
+
+            var user = await _users.Find(u => u.UserName == name).FirstOrDefaultAsync();
+
+            if (user != null && user.Downvotes != null && user.Downvotes.Any())
+            {
+
+                var filter = Builders<Post>.Filter.In(post => post.PostId, user.Downvotes);
+                var downvotedPosts = await _posts.Find(filter).ToListAsync();
+
+                var result = downvotedPosts.Select(post => new
+                {
+                    PostId = post.PostId.ToString(),
+                    Title = post.Title,
+                    Content = post.Content
+                }).ToList();
+
+                return Json(result); 
+            }
+            else
+            {
+                return Json(new List<object>());
+            }
         }
 
 
