@@ -1,0 +1,96 @@
+@{
+
+    ViewData["Title"] = "Home Page";
+    @model Post
+
+}
+<style>.main-content{
+    margin-left: 300px;
+ </style>
+
+
+
+
+
+
+<!-- THIS IS BUTTON PAGE IN SHARED FOLDER... THIS IS WHAT BEING USED FOR OUR POSTS-->
+
+
+
+
+
+<!-- Vote buttons structure-->
+<div class="vote-buttons main-content">
+    <!-- Upvote -->
+    <button class="upvote" onclick="updateScore(this, 'up')" data-post-id="@Model.PostId.ToString()">
+        <div class="lottie-animation" id="upvote-animation"></div>
+    </button>
+
+    <!-- Display the actual score from the model -->
+    <span id="vote-count">@Model.Score</span>
+
+    <!-- Downvote -->
+    <button class="downvote" onclick="updateScore(this, 'down')" data-post-id="@Model.PostId.ToString()">
+        <div class="lottie-animation" id="downvote-animation"></div>
+    </button>
+</div>
+
+
+
+<!-- Place this script block at the end of the file -->
+<script>
+    document.addEventListener("DOMContentLoaded", async () => {
+        const postId = document.querySelector('.upvote').getAttribute('data-post-id');
+
+        try {
+            const response = await fetch(`/Home/GetUserUpvotes`);
+            const upvotes = await response.json();
+            const downvoteResponse = await fetch(`/Home/GetUserDownvotes`);
+            const downvotes = await downvoteResponse.json();
+
+            const isUpvoted = upvotes.some(upvote => upvote.postId === postId);
+            const isDownvoted = downvotes.some(downvote => downvote.postId === postId);
+
+            /*Toggle button states based on user's current vote*/
+            
+            if (isUpvoted) {
+                document.querySelector('.upvote').classList.add('active');
+            }
+            if (isDownvoted) {
+                document.querySelector('.downvote').classList.add('active');
+            }
+        } catch (error) {
+            console.error('Error loading vote state:', error);
+        }
+    });
+
+    async function updateScore(button, voteType) {
+        const postId = button.getAttribute("data-post-id");
+        try {
+            const response = await fetch(`/Post/UpdateScore?postId=${postId}&voteType=${voteType}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            const data = await response.json();
+            if (data.error) {
+                console.error("Error updating score:", data.error);
+            } else {
+                document.getElementById("vote-count").innerText = data.newScore;
+
+                if (voteType === 'up') {
+                    document.querySelector('.upvote').classList.toggle('active');
+                    document.querySelector('.downvote').classList.remove('active');
+                } else {
+                    document.querySelector('.downvote').classList.toggle('active');
+                    document.querySelector('.upvote').classList.remove('active');
+                }
+            }
+        } catch (error) {
+            console.error("Error updating score:", error);
+        }
+    }
+</script>
+
