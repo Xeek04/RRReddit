@@ -1,0 +1,124 @@
+@{
+    ViewData["Title"] = "Home Page";
+    @model Post
+
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+    .main-content {
+        margin-left: 300px;
+    }
+
+    /*make bookmark pretty*/
+    .styled-bookmark-btn {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+        margin: 15px 0;
+        background-color: #f0f0f0;
+        color: #333;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: background-color 0.3s, transform 0.2s;
+    }
+
+        .styled-bookmark-btn:hover {
+            background-color: #e0e0e0;
+            transform: scale(1.05);
+        }
+
+        /*change size for empahsis on click*/
+        .styled-bookmark-btn:active {
+            transform: scale(0.95);
+        }
+
+        .styled-bookmark-btn i {
+            font-size: 1.5rem;
+        }
+</style>
+
+<div class="vote-buttons main-content">
+
+    <button id="bookmarkButton" class="styled-bookmark-btn" onclick="toggleBookmark(this)" data-post-id="@Model.PostId.ToString()">
+        <i id="bookmarkIcon" class="bi bi-bookmark"></i> <span id="bookmarkText">Bookmark</span>
+    </button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", async function () {
+        const postId = document.getElementById("bookmarkButton").getAttribute("data-post-id");
+        console.log("Current post ID:", postId);  //logging current post id
+
+        try {
+            //fetching bookmarks from the server
+            const response = await fetch('/Home/GetUserBookmarks');
+            const data = await response.json();
+
+            console.log("Fetched bookmarks:", data);  //print user's bookmark array
+
+            //checking if the current post is already bookmarked
+            const isBookmarked = data.some(bookmark => bookmark.postId === postId);
+
+            if (isBookmarked) {
+                console.log("Post is already bookmarked, setting to 'Saved'");
+                setBookmarkSaved();
+            } else {
+                console.log("Post is not bookmarked, setting to 'Bookmark'");
+                setBookmarkUnsaved();
+            }
+        } catch (error) {
+            console.error("Error fetching bookmarks:", error);
+        }
+    });
+
+    async function toggleBookmark(button) {
+        const postId = button.getAttribute("data-post-id");
+        try {
+            const response = await fetch(`/Post/ToggleBookmark?postId=${postId}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            const data = await response.json();
+            if (data.error) {
+                console.error("Error updating bookmark:", data.error);
+            } else {
+                // Toggle the bookmark icon and text
+                const isSaved = document.getElementById("bookmarkIcon").classList.contains("bi-bookmark-fill");
+                if (isSaved) {
+                    setBookmarkUnsaved();
+                } else {
+                    setBookmarkSaved();
+                }
+            }
+        } catch (error) {
+            console.error("Error updating bookmark:", error);
+        }
+    }
+
+    function setBookmarkSaved() {
+        const icon = document.getElementById("bookmarkIcon");
+        const text = document.getElementById("bookmarkText");
+        icon.classList.remove("bi-bookmark");
+        icon.classList.add("bi-bookmark-fill");
+        text.textContent = "Saved";
+    }
+
+    function setBookmarkUnsaved() {
+        const icon = document.getElementById("bookmarkIcon");
+        const text = document.getElementById("bookmarkText");
+        icon.classList.remove("bi-bookmark-fill");
+        icon.classList.add("bi-bookmark");
+        text.textContent = "Bookmark";
+    }
+</script>
+
