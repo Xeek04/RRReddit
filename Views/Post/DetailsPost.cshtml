@@ -1,0 +1,59 @@
+@model LoginPopup.Models.Post
+
+<style>
+    
+    .main-content {
+        margin-left: 0px; /* put at 0 becuase already have shifting happening on other pages */
+    }
+
+    .card {
+        margin-left: 0px; /*put 0 becuase already have shifting in bookmark and button pages */
+        padding: 10px; /* some spacing */
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: space-between; /* even space between buttons */
+        align-items: center; /* make sure vertuvally aligned */
+        margin-top: 15px; /* more spacing from above */
+        padding: 10px 0; /* more spacing */
+    }
+
+    .voting-buttons {
+        display: flex; /* voting and bookmark need to be aligned */
+        gap: 10px; 
+    }
+
+    .bookmark-button {
+        margin-right: 100px; /* want this more towards right but not off the page */
+    }
+
+</style>
+
+<div class="main-content">
+    <h2>@ViewData["AccountName"]'s Posts</h2>
+    <h2>@Model.Title</h2>
+    <p>@Model.Content</p>
+
+    <p><strong>Created At:</strong> @Model.CreatedAt</p>
+
+    <!-- Flex container for voting and bookmark buttons -->
+    <div class="button-container">
+        <!-- Voting buttons on the left -->
+        <div class="voting-buttons">
+            @await Html.PartialAsync("~/Views/Shared/Button.cshtml", Model)
+        </div>
+
+        <!-- Bookmark button on the right -->
+        <div class="bookmark-button">
+            @await Html.PartialAsync("~/Views/Shared/Bookmark.cshtml", Model)
+        </div>
+    </div>
+
+    <div class="card">
+        <!-- Card content like comments section -->
+    </div>
+
+    <a asp-action="@Model.SubredditName" asp-controller="Home">Back to All Posts</a>
+</div>
+
