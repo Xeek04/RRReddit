@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
@@ -19,6 +19,16 @@ namespace RRReddit.Models
 
         [BsonElement("subreddits"), BsonRepresentation(BsonType.String)]
         public string? Subreddits { get; set; }
+
+        [BsonElement("upvotes")]
+        public ObjectId[] Upvotes { get; set; }
+
+        [BsonElement("downvotes")]
+        public ObjectId[] Downvotes { get; set; }
+
+        [BsonElement("bookmarks")]
+        public ObjectId[] Bookmarks { get; set; }
+
     }
 
     //class to handle incoming request for the controllers that handle updating subreddits
