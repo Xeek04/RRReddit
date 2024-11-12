@@ -132,7 +132,11 @@
 
             <button class="btn btn-light Overview-button">Overview</button>
             <button class="btn btn-light comments-button">Comments</button>
-            <button class="btn btn-light saved-button">Saved</button>
+
+            <button class="btn btn-light saved-button" data-bs-toggle="modal" data-bs-target="#bookmarksModal" id="fetchBookmarks">
+                Watchlist
+            </button>
+
             <button class="btn btn-light hidden-button">Hidden</button>
 
             <!--buttons that trigger up/down-voted modal -->
@@ -200,6 +204,26 @@
                 <div class="modal-body">
                     <ul id="downvotesList" class="list-group">
                         <!-- code in javaScript will insert list items heree -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Modal for displaying bookmarked posts -->
+    <div class="modal fade" id="bookmarksModal" tabindex="-1" aria-labelledby="bookmarksModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookmarksModalLabel">Bookmarked Posts</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul id="bookmarksList" class="list-group">
+                        <!-- JavaScript will insert list items here -->
                     </ul>
                 </div>
             </div>
@@ -290,6 +314,29 @@
                     });
                 })
                 .catch(error => console.error('Error fetching downvoted posts:', error));
+        });
+
+
+
+        // AJAX to fetch user's bookmarks array from the database when the "Saved" button is clicked
+        document.getElementById("fetchBookmarks").addEventListener("click", function () {
+            fetch('/Home/GetUserBookmarks') // Route to fetch bookmarks
+                .then(response => response.json())
+                .then(data => {
+                    const bookmarksList = document.getElementById("bookmarksList");
+                    bookmarksList.innerHTML = ""; // Clear existing items
+
+                    // Populate the list with bookmarked posts
+                    data.forEach(bookmark => {
+                        const listItem = document.createElement("li");
+                        listItem.classList.add("list-group-item");
+
+                        // Display the tag of the bookmarked post
+                        listItem.innerHTML = `${bookmark.tag}`;
+                        bookmarksList.appendChild(listItem);
+                    });
+                })
+                .catch(error => console.error('Error fetching bookmarked posts:', error));
         });
 
 
