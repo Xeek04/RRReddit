@@ -1,29 +1,162 @@
+using Firebase.Auth;
+using LoginPopup.Models;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using System.Diagnostics;
+using Microsoft.Extensions.Logging;
 using MongoDB.Driver;
 using RRReddit.Models;
-using System.Diagnostics;
 using RRReddit.Data;
+using MongoDB.Bson;
 
-namespace RRReddit.Controllers
+namespace LoginPopup.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        
+
         private readonly IMongoCollection<DatabaseUser>? _users;
         private readonly IMongoCollection<DatabaseUser>? _subreddits;
         private readonly IMongoCollection<Post>? _posts; 
+
+
+
+        private readonly FirebaseAuthProvider _firebaseAuth;
 
         public HomeController(ILogger<HomeController> logger, MongoDatabase mongoDatabase)
         {
             _logger = logger;
 
+            _firebaseAuth = new FirebaseAuthProvider(new FirebaseConfig("AIzaSyCacz_YoziQxAIwvZExl2hP3hwXm8IdMWs"));
+
             _users = mongoDatabase.Database?.GetCollection<DatabaseUser>("users");
             _subreddits = mongoDatabase.Database?.GetCollection<DatabaseUser>("subreddits");
             _posts = mongoDatabase.Database?.GetCollection<Post>("posts");
         }
+  
+
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Remove("AccessToken");
+            return RedirectToAction("Info");
+        }
 
         public IActionResult Index()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(LoginModel vm)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(vm);
+            }
+            try
+            {
+                var result = await _firebaseAuth.CreateUserWithEmailAndPasswordAsync(vm.EmailAddress, vm.Password);
+                await _firebaseAuth.SendEmailVerificationAsync(result.FirebaseToken);
+
+                // Do not sign in the user automatically
+                // Redirect to a "Check Your Email" page or display a success message
+                return RedirectToAction("CheckYourEmail");
+            }
+            catch (FirebaseAuthException ex)
+            {
+                // Handle Firebase authentication exceptions
+                var errorMessage = GetFirebaseAuthErrorMessage(ex);
+                ModelState.AddModelError(string.Empty, errorMessage);
+                return View(vm);
+            }
+        }
+
+
+        [HttpPost]
+        //[HttpPost]
+
+        private string GetFirebaseAuthErrorMessage(FirebaseAuthException ex)
+        {
+            switch (ex.Reason)
+            {
+                case AuthErrorReason.WrongPassword:
+                    return "Incorrect password. Please try again.";
+                case AuthErrorReason.UnknownEmailAddress:
+                    return "Email address not found. Please check and try again.";
+                case AuthErrorReason.InvalidEmailAddress:
+                    return "Invalid email address format.";
+                case AuthErrorReason.UserDisabled:
+                    return "This user account has been disabled.";
+                // Add more cases as needed for different error reasons
+                default:
+                    return "An error occurred during authentication. Please try again.";
+            }
+        }
+
+        public async Task<IActionResult> LoginUser(LoginModel vm)
+        {
+            if (!ModelState.IsValid)
+            {
+                // Log validation errors
+                foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+                {
+                    _logger.LogError(error.ErrorMessage);
+                }
+                // Return the view with validation errors
+                return View("LoginPartial", vm);
+            }
+
+            try
+            {
+                // Sign in the user to get the token
+                var firebaseLink = await _firebaseAuth.SignInWithEmailAndPasswordAsync(vm.EmailAddress, vm.Password);
+                var user = await _firebaseAuth.GetUserAsync(firebaseLink.FirebaseToken);
+
+                if (!user.IsEmailVerified)
+                {
+                    ModelState.AddModelError(string.Empty, "Please verify your email before logging in.");
+                    return View("LoginPartial", vm);
+                }
+
+                string accessToken = firebaseLink.FirebaseToken;
+
+                if (!string.IsNullOrEmpty(accessToken))
+                {
+                    // Store access token and email in session
+                    HttpContext.Session.SetString("AccessToken", accessToken);
+                    HttpContext.Session.SetString("UserEmail", vm.EmailAddress);
+                    // Redirect to Index or show a success message
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Authentication failed. Invalid token.");
+                    return View("LoginPartial", vm);
+                }
+            }
+            catch (FirebaseAuthException ex)
+            {
+                // Handle Firebase authentication exceptions
+                var errorMessage = GetFirebaseAuthErrorMessage(ex);
+                ModelState.AddModelError(string.Empty, errorMessage);
+                return View("LoginPartial", vm);
+            }
+        }
+
+
+
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public IActionResult Button()
         {
             return View();
         }
@@ -43,12 +176,33 @@ namespace RRReddit.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
         {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public IActionResult AccountPage()
+        {
+            // Get the email from the session
+            var email = HttpContext.Session.GetString("UserEmail");
+
+            if (!string.IsNullOrEmpty(email))
+            {
+                // Extract the name from the email (everything before '@')
+                var name = email.Split('@')[0];
+
+                ViewData["AccountName"] = name;
+            }
+
             return View();
         }
 
 
+        public IActionResult Testpage()
+        {
+            return View();
+        }
 
         [HttpGet]
         public async Task<IActionResult> GetUsername()
@@ -89,8 +243,26 @@ namespace RRReddit.Controllers
         [HttpGet]
         public async Task<IActionResult> GetSubreddits()
         {
-            //fetching the user's subreddits field as a single string from the database
-            var user = await _users.Find(_ => true).FirstOrDefaultAsync();
+            //get user email and then split it to only get name before @
+            var email = HttpContext.Session.GetString("UserEmail");
+            var name = email.Split('@')[0];
+
+            //checking to make sure user logged in
+            if (string.IsNullOrEmpty(email))
+            {
+                return Json(new { message = "User not logged in." });
+            }
+
+            //Query the user by name which is username in database
+            var user = await _users.Find(u => u.UserName == name).FirstOrDefaultAsync();
+
+            //checking if user was found
+            if (user == null)
+            {
+                return Json(new { message = "User not found." });
+            }
+
+            //get string
             var subredditsString = user.Subreddits;
 
             //if string is empty/null then give a defulat message
@@ -112,7 +284,25 @@ namespace RRReddit.Controllers
         [HttpGet]
         public async Task<IActionResult> GetJoinedSubreddits()
         {
-            var user = await _users.Find(_ => true).FirstOrDefaultAsync(); 
+            //get user email and then split it to only get name before @
+            var email = HttpContext.Session.GetString("UserEmail");
+            var name = email.Split('@')[0];
+
+            //checking to make sure user logged in
+            if (string.IsNullOrEmpty(email))
+            {
+                return Json(new { message = "User not logged in." });
+            }
+
+            //Query the user by name which is username in database
+            var user = await _users.Find(u => u.UserName == name).FirstOrDefaultAsync();
+
+            //checking if user was found
+            if (user == null)
+            {
+                return Json(new { message = "User not found." });
+            }
+
             var subredditsString = user?.Subreddits ?? "";
 
             return Json(subredditsString.Split(", ").ToList());
@@ -126,8 +316,19 @@ namespace RRReddit.Controllers
             //logs for debugging. these will appear in server console not view console. they get called with joined button in subreddits pages
             Console.WriteLine($"Received request to update subreddits: {request.UpdatedSubreddits}");
 
-            //fetching user
-            var user = await _users.Find(_ => true).FirstOrDefaultAsync();
+            //get user email and then split it to only get name before @
+            var email = HttpContext.Session.GetString("UserEmail");
+            var name = email.Split('@')[0];
+
+            //checking to make sure user logged in
+            if (string.IsNullOrEmpty(email))
+            {
+                return Json(new { message = "User not logged in." });
+            }
+
+            //Query the user by name which is username in database
+            var user = await _users.Find(u => u.UserName == name).FirstOrDefaultAsync();
+
             if (user == null)
             {
                 Console.WriteLine("User not found");
@@ -178,52 +379,152 @@ namespace RRReddit.Controllers
         /* each subreddit gets called in layout and explore */
         public IActionResult Action()
         {
-            return View();
+            string subredditName = "Action";
+
+            // Filter posts belonging to this subreddit
+            var subredditPosts = DataStore.Posts.Where(p => p.SubredditName == subredditName).ToList();
+
+            var viewModel = new SubredditViewModel
+            {
+                SubredditName = subredditName,
+                Posts = subredditPosts
+            };
+
+            return View("Action", viewModel);
         }
 
         public IActionResult Comedy()
         {
-            return View();
+            string subredditName = "Comedy";
+
+            // Filter posts belonging to this subreddit
+            var subredditPosts = DataStore.Posts.Where(p => p.SubredditName == subredditName).ToList();
+
+            var viewModel = new SubredditViewModel
+            {
+                SubredditName = subredditName,
+                Posts = subredditPosts
+            };
+
+            return View("Comedy", viewModel);
         }
 
         public IActionResult Drama()
         {
-            return View();
+            string subredditName = "Drama";
+
+            // Filter posts belonging to this subreddit
+            var subredditPosts = DataStore.Posts.Where(p => p.SubredditName == subredditName).ToList();
+
+            var viewModel = new SubredditViewModel
+            {
+                SubredditName = subredditName,
+                Posts = subredditPosts
+            };
+
+            return View("Drama", viewModel);
         }
 
         public IActionResult Fantasy()
         {
-            return View();
+            string subredditName = "Fantasy";
+
+            // Filter posts belonging to this subreddit
+            var subredditPosts = DataStore.Posts.Where(p => p.SubredditName == subredditName).ToList();
+
+            var viewModel = new SubredditViewModel
+            {
+                SubredditName = subredditName,
+                Posts = subredditPosts
+            };
+
+            return View("Fantasy", viewModel);
         }
 
         public IActionResult Horror()
         {
-            return View();
+            string subredditName = "Horror";
+
+            // Filter posts belonging to this subreddit
+            var subredditPosts = DataStore.Posts.Where(p => p.SubredditName == subredditName).ToList();
+
+            var viewModel = new SubredditViewModel
+            {
+                SubredditName = subredditName,
+                Posts = subredditPosts
+            };
+
+            return View("Horror", viewModel);
         }
 
         public IActionResult Mystery()
         {
-            return View();
+            string subredditName = "Mystery";
+
+            // Filter posts belonging to this subreddit
+            var subredditPosts = DataStore.Posts.Where(p => p.SubredditName == subredditName).ToList();
+
+            var viewModel = new SubredditViewModel
+            {
+                SubredditName = subredditName,
+                Posts = subredditPosts
+            };
+
+            return View("Mystery", viewModel);
         }
 
         public IActionResult Romance()
         {
-            return View();
+            string subredditName = "Romance";
+
+            // Filter posts belonging to this subreddit
+            var subredditPosts = DataStore.Posts.Where(p => p.SubredditName == subredditName).ToList();
+
+            var viewModel = new SubredditViewModel
+            {
+                SubredditName = subredditName,
+                Posts = subredditPosts
+            };
+
+            return View("Romance", viewModel);
         }
 
         public IActionResult ScienceFiction()
         {
-            return View();
+            string subredditName = "ScienceFiction";
+
+            // Filter posts belonging to this subreddit
+            var subredditPosts = DataStore.Posts.Where(p => p.SubredditName == subredditName).ToList();
+
+            var viewModel = new SubredditViewModel
+            {
+                SubredditName = subredditName,
+                Posts = subredditPosts
+            };
+
+            return View("ScienceFiction", viewModel);
         }
 
         public IActionResult Thriller()
         {
-            return View();
+            string subredditName = "Thriller";
+
+            // Filter posts belonging to this subreddit
+            var subredditPosts = DataStore.Posts.Where(p => p.SubredditName == subredditName).ToList();
+
+            var viewModel = new SubredditViewModel
+            {
+                SubredditName = subredditName,
+                Posts = subredditPosts
+            };
+
+            return View("Thriller", viewModel);
         }
 
 
-        
-        /* here is where messing with array for upvotes and downvotes */
+
+
+        ///////////////////////////////* here is where messing with array for upvotes and downvotes */
 
         [HttpGet]
         public async Task<IActionResult> GetUserUpvotes()
@@ -289,10 +590,103 @@ namespace RRReddit.Controllers
 
 
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+
+        ////////////////////////////bookmarking stuff now
+
+        [HttpPost("/Post/ToggleBookmark")]
+        public async Task<IActionResult> ToggleBookmark(string postId)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            // Convert the postId string to an ObjectId
+            if (!ObjectId.TryParse(postId, out ObjectId objectId))
+            {
+                return Json(new { error = "Invalid post ID format." });
+            }
+
+            // Retrieve user email and extract the username
+            var email = HttpContext.Session.GetString("UserEmail");
+            if (string.IsNullOrEmpty(email))
+            {
+                return Json(new { error = "User not authenticated." });
+            }
+            var name = email.Split('@')[0];
+
+            // Query the user by username in the database
+            var user = await _users.Find(u => u.UserName == name).FirstOrDefaultAsync();
+            if (user == null)
+            {
+                return Json(new { error = "User not found." });
+            }
+
+            // Check if the post is already bookmarked by the user
+            bool isBookmarked = user.Bookmarks.Contains(objectId);
+
+            // Update the bookmarks array based on the current state
+            if (!isBookmarked)
+            {
+                // Add post ID to the user's bookmarks array
+                var addToBookmarks = Builders<DatabaseUser>.Update.Push(u => u.Bookmarks, objectId);
+                await _users.UpdateOneAsync(u => u.UserName == name, addToBookmarks);
+            }
+            else
+            {
+                // Remove post ID from the user's bookmarks array
+                var removeFromBookmarks = Builders<DatabaseUser>.Update.Pull(u => u.Bookmarks, objectId);
+                await _users.UpdateOneAsync(u => u.UserName == name, removeFromBookmarks);
+            }
+
+            return Json(new { success = true });
         }
+
+
+
+
+        [HttpGet]
+        public async Task<IActionResult> GetUserBookmarks()
+        {
+            // Retrieve the user's email from the session and extract the username
+            var email = HttpContext.Session.GetString("UserEmail");
+            var name = email?.Split('@')[0];
+
+            if (string.IsNullOrEmpty(name))
+            {
+                return Json(new { error = "User not authenticated." });
+            }
+
+            // Query the user by their username
+            var user = await _users.Find(u => u.UserName == name).FirstOrDefaultAsync();
+
+            if (user != null && user.Bookmarks != null && user.Bookmarks.Any())
+            {
+                // Fetch posts based on the ObjectIds in the bookmarks array
+                var filter = Builders<Post>.Filter.In(post => post.PostId, user.Bookmarks);
+                var bookmarkedPosts = await _posts.Find(filter).ToListAsync();
+
+                // Prepare the data to include the tag for each bookmarked post
+                var result = bookmarkedPosts.Select(post => new
+                {
+                    PostId = post.PostId.ToString(),
+                    Tag = post.Tag
+                }).ToList();
+
+                return Json(result); // Return the bookmarked posts as JSON
+            }
+            else
+            {
+                return Json(new List<object>()); // Return an empty list if no bookmarks found
+            }
+        }
+
+
+
+
+
+
+
+
+        public IActionResult CheckYourEmail()
+        {
+            return View();
+        }
+
     }
 }
