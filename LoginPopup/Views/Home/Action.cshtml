@@ -103,7 +103,6 @@
             <h1 class="subreddit-title">r/@Model.SubredditName</h1>
 
             <a asp-controller="Post" asp-action="Create" asp-route-subredditName="@Model.SubredditName" class="btn btn-primary">Create Post</a>
-            <a asp-controller="Post" asp-action="SubPosts" asp-route-subredditName="@Model.SubredditName" class="btn btn-primary">Pull</a>
             <button class="btn btn-light join-button" id="joinButton">Join</button>
         </div>
     </div>

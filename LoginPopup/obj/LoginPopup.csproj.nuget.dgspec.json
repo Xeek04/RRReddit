@@ -54,9 +54,29 @@
               "target": "Package",
               "version": "[1.0.0, )"
             },
+            "Microsoft.AspNetCore.NodeServices": {
+              "target": "Package",
+              "version": "[3.1.32, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
             "MongoDB.Driver": {
               "target": "Package",
-              "version": "[2.29.0, )"
+              "version": "[3.0.0, )"
+            },
+            "Node.js": {
+              "target": "Package",
+              "version": "[5.3.0, )"
+            },
+            "RequireJS": {
+              "target": "Package",
+              "version": "[2.3.6, )"
+            },
+            "RequireJsNet": {
+              "target": "Package",
+              "version": "[3.1.0, )"
             }
           },
           "imports": [

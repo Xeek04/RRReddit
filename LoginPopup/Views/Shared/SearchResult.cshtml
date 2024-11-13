@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewData["Title"] = "SearchResult";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <style>
+            .content-area {
+                flex: 0 0 65%;
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>@ViewData["Query"]</h1>
+        <div class="content-area">
+            @foreach (var post in Model.Posts)
+            {
+                <h3>
+                    <a asp-controller="Post" asp-action="Details" asp-route-id="@post.Id">@post.Title</a>
+                </h3>
+                <div class="post-preview" id="post-@post.Id">
+
+                    <p>
+                        @post.GetPreview(100)
+                    </p>
+                    <p><small>@post.GetTimeAgo()</small></p>
+
+                    <!-- Link to view the full post with interactions -->
+
+
+                </div>
+            }
+        </div>
+    </body>
+
+</html>

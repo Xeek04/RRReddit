@@ -1,4 +1,13 @@
-﻿// Function to add the comment icon and form under each post dynamically
+﻿const MongoClient = require("mongodb");
+const url = "mongodb+srv://zbrowning04:Y5sgCMRTpCZYPZ2@403server.e4yev.mongodb.net/?retryWrites=true&w=majority&appName=403Server";
+const client = new MongoClient(url);
+const database = client.db('RRReddit');
+const movies = database.collection('users');
+const query = { username: 'zrb002' };
+const movie = movies.findOne(query);
+console.log(movie);
+
+// Function to add the comment icon and form under each post dynamically
 function addCommentIcons() {
     const posts = document.querySelectorAll('.card');
     posts.forEach(post => {
@@ -42,6 +51,7 @@ function postComment(post) {
     if (commentText !== '') {
         const commentSection = post.querySelector('.comment-section');
         const newComment = document.createElement('p');
+        const commentsave = document.createElement('a');
         newComment.textContent = commentText;
         commentSection.appendChild(newComment);
 

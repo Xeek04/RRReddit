@@ -64,6 +64,22 @@ public class PostController : Controller
         return RedirectToAction(subRedditName, "Home");
     }
 
+    [HttpGet]
+    public async Task<IActionResult> SearchBar(string query)
+    {
+        var filter = Builders<Post>.Filter.Eq(Post => Post.Tag, query);
+        var result = await _postsCollection.Find(filter).ToListAsync();
+        ViewData["Query"] = query;
+
+        var viewModel = new SubredditViewModel
+        {
+            SubredditName = query,
+            Posts = result
+        };
+
+        return View("SearchResult", viewModel);
+    }
+
     // GET: Show list of all posts
     public IActionResult Index()
     {

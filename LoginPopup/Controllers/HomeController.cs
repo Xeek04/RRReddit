@@ -144,7 +144,10 @@ namespace LoginPopup.Controllers
             }
         }
 
-
+        public IActionResult SearchResult()
+        {
+            return View();
+        }
 
         public IActionResult Privacy()
         {
@@ -193,6 +196,10 @@ namespace LoginPopup.Controllers
             return View();
         }
 
+        public void testing()
+        {
+            Console.WriteLine("hello dummy");
+        }
 
         public IActionResult Testpage()
         {
@@ -231,8 +238,6 @@ namespace LoginPopup.Controllers
             await _users.UpdateOneAsync(search, update);
             return View("Index");
         }
-
-
 
         /* this function is used in just showing the subreddits a user has in the database. called in account page for "VIEW SUBREDDITS" button */
         [HttpGet]

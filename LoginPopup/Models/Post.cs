@@ -21,11 +21,11 @@ namespace LoginPopup.Models
         [BsonElement("_id"), BsonRepresentation(BsonType.ObjectId)]
         public string? PostId { get; set; }
 
-        [BsonElement("user"), BsonRepresentation(BsonType.String)]
-        public string? User { get; set; }
-
         [BsonElement("post_id"), BsonRepresentation(BsonType.Int32)]
         public int Id { get; set; }
+
+        [BsonElement("user"), BsonRepresentation(BsonType.String)]
+        public string? User { get; set; }
 
         [BsonElement("title"), BsonRepresentation(BsonType.String)]
         public string Title { get; set; }

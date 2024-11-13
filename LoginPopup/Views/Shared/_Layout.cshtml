@@ -140,8 +140,8 @@
                     @if (isAuthenticated)
 
                     {
-                        <form class="d-flex mx-auto" role="search" method="GET" action="/search">
-                            <input class="form-control" type="search" placeholder="Search RRReddit" aria-label="Search">
+                        <form asp-area="" asp-action="SearchBar" asp-controller="Post" method="get" class="d-flex mx-auto" role="search">
+                            <input class="form-control" type="search" placeholder="Search RRReddit" aria-label="Search" name="query">
                         </form>
                     }
 
@@ -152,7 +152,6 @@
 
 
                     }
-
 
                     <!-- Right-aligned buttons -->
                     <ul class="navbar-nav ml-auto">
