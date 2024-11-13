@@ -1,0 +1,59 @@
+@model IEnumerable<LoginPopup.Models.Comment>
+
+<div class="comments-section">
+    <h3>Comments</h3>
+
+    @if (!Model.Any())
+    {
+        <p>No comments yet. Be the first to comment!</p>
+    }
+    else
+    {
+        @foreach (var comment in Model)
+        {
+            <div class="comment">
+                <strong>@comment.User</strong>
+                <p>@comment.Content</p>
+                <small class="comment-timestamp" data-timestamp="@comment.CreatedAt.ToString("o")"></small> <!-- ISO format for JS conversion -->
+                <!-- Reply Form -->
+                <form asp-controller="Comment" asp-action="AddReply" method="post" class="reply-form" style="margin-top: 10px;">
+                    <input type="hidden" name="commentId" value="@comment.Id.ToString()" />
+                    <div class="form-group">
+                        <textarea name="content" placeholder="Write a reply..." class="form-control"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-secondary btn-sm">Reply</button>
+                </form>
+
+                <!-- Display replies if any -->
+                @if (comment.Replies != null && comment.Replies.Any())
+                {
+                    <div class="replies" style="margin-left: 20px; margin-top: 10px;">
+                        @foreach (var reply in comment.Replies)
+                        {
+                            <div class="reply">
+                                <strong>@reply.User</strong>
+                                <p>@reply.Content</p>
+                                <small class="comment-timestamp" data-timestamp="@reply.CreatedAt.ToString("o")"></small>
+                            </div>
+                            <hr />
+                        }
+                    </div>
+                }
+            </div>
+            <hr />
+        }
+    }
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".comment-timestamp").forEach(function (element) {
+            const utcDate = element.getAttribute("data-timestamp");
+            const localDate = new Date(utcDate);
+
+            // Format the date to display without seconds
+            const options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: 'numeric', minute: 'numeric' };
+            element.textContent = localDate.toLocaleString(undefined, options);
+        });
+    });
+</script>
