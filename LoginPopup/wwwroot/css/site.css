@@ -48,7 +48,7 @@ body {
 
     .downvote:hover {
         border: 2px solid white; /* Square border color */
-<<<<<<< HEAD
+
         background-color: ghostwhite; /* Optional: Add a subtle red background on hover */
         
     }
@@ -62,8 +62,32 @@ body {
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: a slight shadow for more emphasis */
     }
 
-=======
-        background-color: ghostwhite; /* Optional: Add a subtle red background on hover *
-        
+
+     
+
+.comment-list {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.comment-icon {
+    cursor: pointer;
+    color: #0079d3;
+    border-radius: 5px;
+    padding: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.3s;
+}
+
+    .comment-icon:hover {
+        background-color: rgba(0, 121, 211, 0.1);
     }
->>>>>>> master
+
+
+
+        
+    
