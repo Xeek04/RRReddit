@@ -18,16 +18,48 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Coby Taylor\Desktop\All Programming\La Tech Programming\Software Engineering and Design\RRReddit\LoginPopup
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Coby Taylor/Desktop/All Programming/La Tech Programming/Software Engineering and Design/RRReddit/LoginPopup/Views/Comment/CommentsList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudFxDb21tZW50c0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Coby Taylor/Desktop/All Programming/La Tech Programming/Software Engineering and Design/RRReddit/LoginPopup/Views/Comment/CreateComment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudFxDcmVhdGVDb21tZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Coby Taylor/Desktop/All Programming/La Tech Programming/Software Engineering and Design/RRReddit/LoginPopup/Views/Home/AccountPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBY2NvdW50UGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Coby Taylor/Desktop/All Programming/La Tech Programming/Software Engineering and Design/RRReddit/LoginPopup/Views/Home/Action.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBY3Rpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Coby Taylor/Desktop/All Programming/La Tech Programming/Software Engineering and Design/RRReddit/LoginPopup/Views/Home/Button.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCdXR0b24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Coby Taylor/Desktop/All Programming/La Tech Programming/Software Engineering and Design/RRReddit/LoginPopup/Views/Home/CheckYourEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGVja1lvdXJFbWFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Coby Taylor/Desktop/All Programming/La Tech Programming/Software Engineering and Design/RRReddit/LoginPopup/Views/Home/Comedy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb21lZHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Coby Taylor/Desktop/All Programming/La Tech Programming/Software Engineering and Design/RRReddit/LoginPopup/Views/Home/Drama.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEcmFtYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Coby Taylor/Desktop/All Programming/La Tech Programming/Software Engineering and Design/RRReddit/LoginPopup/Views/Home/Explore.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFeHBsb3JlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Coby Taylor/Desktop/All Programming/La Tech Programming/Software Engineering and Design/RRReddit/LoginPopup/Views/Home/Fantasy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGYW50YXN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Coby Taylor/Desktop/All Programming/La Tech Programming/Software Engineering and Design/RRReddit/LoginPopup/Views/Home/Horror.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb3Jyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Coby Taylor/Desktop/All Programming/La Tech Programming/Software Engineering and Design/RRReddit/LoginPopup/Views/Home/Index.cshtml]
@@ -38,16 +70,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmZvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Coby Taylor/Desktop/All Programming/La Tech Programming/Software Engineering and Design/RRReddit/LoginPopup/Views/Home/Mystery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNeXN0ZXJ5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Coby Taylor/Desktop/All Programming/La Tech Programming/Software Engineering and Design/RRReddit/LoginPopup/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Coby Taylor/Desktop/All Programming/La Tech Programming/Software Engineering and Design/RRReddit/LoginPopup/Views/Home/Subreddit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdWJyZWRkaXQuY3NodG1s
+[C:/Users/Coby Taylor/Desktop/All Programming/La Tech Programming/Software Engineering and Design/RRReddit/LoginPopup/Views/Home/Romance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSb21hbmNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Coby Taylor/Desktop/All Programming/La Tech Programming/Software Engineering and Design/RRReddit/LoginPopup/Views/Home/ScienceFiction.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTY2llbmNlRmljdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Coby Taylor/Desktop/All Programming/La Tech Programming/Software Engineering and Design/RRReddit/LoginPopup/Views/Home/Testpage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUZXN0cGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Coby Taylor/Desktop/All Programming/La Tech Programming/Software Engineering and Design/RRReddit/LoginPopup/Views/Home/Thriller.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUaHJpbGxlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Coby Taylor/Desktop/All Programming/La Tech Programming/Software Engineering and Design/RRReddit/LoginPopup/Views/Post/CreatePost.cshtml]
@@ -70,6 +114,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdFxQb3N0UHJldmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Coby Taylor/Desktop/All Programming/La Tech Programming/Software Engineering and Design/RRReddit/LoginPopup/Views/Shared/Bookmark.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJvb2ttYXJrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Coby Taylor/Desktop/All Programming/La Tech Programming/Software Engineering and Design/RRReddit/LoginPopup/Views/Shared/Button.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJ1dHRvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -84,6 +132,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Coby Taylor/Desktop/All Programming/La Tech Programming/Software Engineering and Design/RRReddit/LoginPopup/Views/Shared/LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExvZ2luUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Coby Taylor/Desktop/All Programming/La Tech Programming/Software Engineering and Design/RRReddit/LoginPopup/Views/Shared/SearchResult.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFNlYXJjaFJlc3VsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Coby Taylor/Desktop/All Programming/La Tech Programming/Software Engineering and Design/RRReddit/LoginPopup/Views/Shared/_CommentSection.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Db21tZW50U2VjdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Coby Taylor/Desktop/All Programming/La Tech Programming/Software Engineering and Design/RRReddit/LoginPopup/Views/Shared/_ValidationScriptsPartial.cshtml]

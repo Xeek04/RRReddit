@@ -95,3 +95,26 @@ C:\Users\Coby Taylor\Desktop\RRReddit-master\LoginPopup\obj\Debug\net8.0\scopedc
 C:\Users\Coby Taylor\Desktop\RRReddit-master\LoginPopup\obj\Debug\net8.0\LoginPopup.csproj.Up2Date
 C:\Users\Coby Taylor\Desktop\RRReddit-master\LoginPopup\obj\Debug\net8.0\LoginPopup.genruntimeconfig.cache
 C:\Users\Coby Taylor\Desktop\RRReddit-master\LoginPopup\obj\Debug\net8.0\ref\LoginPopup.dll
+C:\Users\Coby Taylor\Desktop\All Programming\La Tech Programming\Software Engineering and Design\RRReddit\LoginPopup\bin\Debug\net8.0\Config\rrreddit-6ed19-firebase-adminsdk-amdyd-b89dd14407.json
+C:\Users\Coby Taylor\Desktop\All Programming\La Tech Programming\Software Engineering and Design\RRReddit\LoginPopup\bin\Debug\net8.0\FirebaseAdmin.dll
+C:\Users\Coby Taylor\Desktop\All Programming\La Tech Programming\Software Engineering and Design\RRReddit\LoginPopup\bin\Debug\net8.0\Google.Api.CommonProtos.dll
+C:\Users\Coby Taylor\Desktop\All Programming\La Tech Programming\Software Engineering and Design\RRReddit\LoginPopup\bin\Debug\net8.0\Google.Api.Gax.dll
+C:\Users\Coby Taylor\Desktop\All Programming\La Tech Programming\Software Engineering and Design\RRReddit\LoginPopup\bin\Debug\net8.0\Google.Api.Gax.Grpc.dll
+C:\Users\Coby Taylor\Desktop\All Programming\La Tech Programming\Software Engineering and Design\RRReddit\LoginPopup\bin\Debug\net8.0\Google.Api.Gax.Rest.dll
+C:\Users\Coby Taylor\Desktop\All Programming\La Tech Programming\Software Engineering and Design\RRReddit\LoginPopup\bin\Debug\net8.0\Google.Apis.dll
+C:\Users\Coby Taylor\Desktop\All Programming\La Tech Programming\Software Engineering and Design\RRReddit\LoginPopup\bin\Debug\net8.0\Google.Apis.Auth.dll
+C:\Users\Coby Taylor\Desktop\All Programming\La Tech Programming\Software Engineering and Design\RRReddit\LoginPopup\bin\Debug\net8.0\Google.Apis.Core.dll
+C:\Users\Coby Taylor\Desktop\All Programming\La Tech Programming\Software Engineering and Design\RRReddit\LoginPopup\bin\Debug\net8.0\Google.Cloud.Firestore.dll
+C:\Users\Coby Taylor\Desktop\All Programming\La Tech Programming\Software Engineering and Design\RRReddit\LoginPopup\bin\Debug\net8.0\Google.Cloud.Firestore.V1.dll
+C:\Users\Coby Taylor\Desktop\All Programming\La Tech Programming\Software Engineering and Design\RRReddit\LoginPopup\bin\Debug\net8.0\Google.Cloud.Location.dll
+C:\Users\Coby Taylor\Desktop\All Programming\La Tech Programming\Software Engineering and Design\RRReddit\LoginPopup\bin\Debug\net8.0\Google.LongRunning.dll
+C:\Users\Coby Taylor\Desktop\All Programming\La Tech Programming\Software Engineering and Design\RRReddit\LoginPopup\bin\Debug\net8.0\Google.Protobuf.dll
+C:\Users\Coby Taylor\Desktop\All Programming\La Tech Programming\Software Engineering and Design\RRReddit\LoginPopup\bin\Debug\net8.0\Grpc.Auth.dll
+C:\Users\Coby Taylor\Desktop\All Programming\La Tech Programming\Software Engineering and Design\RRReddit\LoginPopup\bin\Debug\net8.0\Grpc.Core.Api.dll
+C:\Users\Coby Taylor\Desktop\All Programming\La Tech Programming\Software Engineering and Design\RRReddit\LoginPopup\bin\Debug\net8.0\Grpc.Net.Client.dll
+C:\Users\Coby Taylor\Desktop\All Programming\La Tech Programming\Software Engineering and Design\RRReddit\LoginPopup\bin\Debug\net8.0\Grpc.Net.Common.dll
+C:\Users\Coby Taylor\Desktop\All Programming\La Tech Programming\Software Engineering and Design\RRReddit\LoginPopup\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Coby Taylor\Desktop\All Programming\La Tech Programming\Software Engineering and Design\RRReddit\LoginPopup\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\Coby Taylor\Desktop\All Programming\La Tech Programming\Software Engineering and Design\RRReddit\LoginPopup\bin\Debug\net8.0\System.Linq.Async.dll
+C:\Users\Coby Taylor\Desktop\All Programming\La Tech Programming\Software Engineering and Design\RRReddit\LoginPopup\bin\Debug\net8.0\System.Management.dll
+C:\Users\Coby Taylor\Desktop\All Programming\La Tech Programming\Software Engineering and Design\RRReddit\LoginPopup\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Management.dll
