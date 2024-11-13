@@ -1,12 +1,126 @@
 ﻿@model LoginPopup.Models.Post
 
-<h2>@ViewData["AccountName"]'s Posts</h2>
-<h2>@Model.Title</h2>
-<p>@Model.Content</p>
+<style>
+    /* Container for the main post content */
+    .main-content {
+        position: relative;
+    }
 
-<p><strong>Created At:</strong> @Model.CreatedAt</p>
+    /* Container for the entire post header including the save button */
+    .post-header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
 
-<!-- Add the like/dislike buttons here -->
-@await Html.PartialAsync("~/Views/Shared/Button.cshtml", Model)
+    /* Header styling for account name */
+    .post-header h2 {
+        margin: 0;
+    }
 
-<a asp-action="Index">Back to All Posts</a>
+    /* Save Button Styling */
+    .save-button-container {
+        margin-left: auto;
+    }
+
+    /* Styling for the post box */
+    .post-box {
+        border: 2px solid #ddd; /* Light grey border */
+        padding: 20px; /* Spacing inside the box */
+        border-radius: 10px; /* Rounded corners */
+        background-color: #f9f9f9; /* Light grey background for better contrast */
+        margin-bottom: 10px; /* Space between post box and other elements */
+    }
+
+    /* Styling for the post title */
+    .post-title {
+        font-size: 1.5em; /* Make the title larger */
+        font-weight: bold; /* Bold title */
+        margin-top: 0; /* Remove top margin for better alignment */
+    }
+
+    /* Styling for the movie name */
+    .movie-name {
+        font-size: 1.2em; /* Slightly smaller than the title */
+        color: #666; /* Grey color for contrast */
+        margin-top: 5px; /* Space between title and movie name */
+    }
+
+    /* Styling for the post content */
+    .post-content {
+        margin-top: 10px; /* Space between title and content */
+        margin-bottom: 15px; /* Space below content */
+    }
+
+    /* Container for the vote buttons */
+    .vote-buttons-container {
+        display: flex;
+        justify-content: flex-end; /* Align to the right */
+        margin-top: -10px; /* Pull closer to the post box */
+        margin-bottom: 20px; /* Space below vote buttons and comment section */
+    }
+
+    /* Styling for the upvote/downvote section */
+    .vote-buttons {
+        margin-right: 10px; /* Space between buttons and right edge */
+    }
+
+    /* Comment Section Styling */
+    .comments-section {
+        margin-top: 20px;
+    }
+
+    /* Styling for the comment form */
+    .reply-form {
+        margin-top: 10px;
+    }
+</style>
+
+<div class="main-content">
+
+    <!-- Post Header with Save Button in Top Right -->
+    <div class="post-header-container">
+        <div class="post-header">
+            <h2>@Model.User's Posts</h2> <!-- Display the original poster's name -->
+        </div>
+        <div class="save-button-container">
+            @await Html.PartialAsync("~/Views/Shared/Bookmark.cshtml", Model)
+        </div>
+    </div>
+
+    <!-- Boxed Title Section -->
+    <div class="post-box">
+        <h2 class="post-title">@Model.Title</h2>
+        <p class="movie-name">@Model.MovieName</p> <!-- Display Movie Name under Title -->
+        <p class="post-content">@Model.Content</p>
+        <p><strong>Created At:</strong> @Model.CreatedAt.ToString("MM/dd/yyyy hh:mm tt")</p>
+    </div>
+
+    <!-- Upvote/Downvote Section Below Content Box -->
+    <div class="vote-buttons-container">
+        <div class="vote-buttons">
+            @await Html.PartialAsync("~/Views/Shared/Button.cshtml", Model)
+        </div>
+    </div>
+
+    <!-- Comment Section -->
+    @await Html.PartialAsync("~/Views/Comment/CreateComment.cshtml", new LoginPopup.Models.Comment { PostId = Model.PostId })
+
+    <div class="comments-section">
+        @if (ViewData["Comments"] is List<LoginPopup.Models.Comment> comments && comments.Any())
+        {
+            @await Html.PartialAsync("~/Views/Comment/CommentsList.cshtml", comments)
+        }
+        else
+        {
+            <p>No comments available for this post.</p>
+        }
+    </div>
+
+    <!-- Delete button for the current post -->
+    <a asp-action="Delete" asp-controller="Post" asp-route-postId="@Model.PostId" class="btn btn-danger" style="margin-top: 10px;">Delete</a>
+
+    <a asp-action="@Model.SubredditName" asp-controller="Home">Back to All Posts</a>
+
+</div>

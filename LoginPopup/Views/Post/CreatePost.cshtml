@@ -1,17 +1,40 @@
 ﻿@model LoginPopup.Models.Post
 
-<h2>Create Post</h2>
+<h2>Create Post in @Model.SubredditName</h2>
 
 <form asp-action="Create" method="post">
+    @Html.AntiForgeryToken()
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <!-- Hidden field for SubredditName -->
+    <input type="hidden" asp-for="SubredditName" />
+
+    <!-- Title Field -->
     <div class="form-group">
         <label asp-for="Title"></label>
         <input asp-for="Title" class="form-control" />
         <span asp-validation-for="Title" class="text-danger"></span>
     </div>
+
+    <div class="form-group">
+        <label asp-for="MovieName"></label>
+        <input asp-for="MovieName" class="form-control" />
+        <span asp-validation-for="MovieName" class="text-danger"></span>
+    </div>
+
+    <!-- Content Field -->
     <div class="form-group">
         <label asp-for="Content"></label>
         <textarea asp-for="Content" class="form-control"></textarea>
         <span asp-validation-for="Content" class="text-danger"></span>
     </div>
+
     <button type="submit" class="btn btn-primary">Create Post</button>
 </form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

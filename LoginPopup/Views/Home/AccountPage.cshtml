@@ -125,17 +125,27 @@
             <button class="btn btn-light create-post-button">Posts</button>
 
             <!--button that trigger subreddits modal -->
-            <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#subredditsModal" id="fetchSubreddits">
+            <button class="btn btn-light subreddit-button" data-bs-toggle="modal" data-bs-target="#subredditsModal" id="fetchSubreddits">
                 View Joined Subreddits
             </button>
 
 
             <button class="btn btn-light Overview-button">Overview</button>
             <button class="btn btn-light comments-button">Comments</button>
-            <button class="btn btn-light saved-button">Saved</button>
+
+            <button class="btn btn-light saved-button" data-bs-toggle="modal" data-bs-target="#bookmarksModal" id="fetchBookmarks">
+                Watchlist
+            </button>
+
             <button class="btn btn-light hidden-button">Hidden</button>
-            <button class="btn btn-light upvoted-button">Upvoted</button>
-            <button class="btn btn-light downvoted-button">Downvoted</button>
+
+            <!--buttons that trigger up/down-voted modal -->
+            <button class="btn btn-light upvoted-button" data-bs-toggle="modal" data-bs-target="#upvotesModal" id="fetchUpvotes">
+                Upvoted
+            </button>
+            <button class="btn btn-light downvoted-button" data-bs-toggle="modal" data-bs-target="#downvotesModal" id="fetchDownvotes">
+                Downvoted
+            </button>
 
 
 
@@ -165,11 +175,71 @@
 
 
 
+    <!-- Modal for displaying upvoted posts -->
+    <div class="modal fade" id="upvotesModal" tabindex="-1" aria-labelledby="upvotesModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="upvotesModalLabel">Upvoted Posts</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul id="upvotesList" class="list-group">
+                        <!-- code in javaScript will insert list items here -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal for displaying downvoted posts -->
+    <div class="modal fade" id="downvotesModal" tabindex="-1" aria-labelledby="downvotesModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="downvotesModalLabel">Downvoted Posts</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul id="downvotesList" class="list-group">
+                        <!-- code in javaScript will insert list items heree -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Modal for displaying bookmarked posts -->
+    <div class="modal fade" id="bookmarksModal" tabindex="-1" aria-labelledby="bookmarksModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookmarksModalLabel">Bookmarked Posts</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul id="bookmarksList" class="list-group">
+                        <!-- JavaScript will insert list items here -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
     <!-- Bootstrap JS (optional for functionality like collapsible elements) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 
-    <!-- JavaScript for subreddit listing -->
+
     <script>
         //varibale to save list from database
         var joinedSubreddits = [];
@@ -201,6 +271,74 @@
                 })
                 .catch(error => console.error('Error fetching subreddits:', error));
         });
+
+
+        //AJAX to fetch user's upvotes array from database when the "upvoted" button is clicked
+        document.getElementById("fetchUpvotes").addEventListener("click", function () {
+            fetch('/Home/GetUserUpvotes') // actual controller's route
+                .then(response => response.json())
+                .then(data => {
+                    const upvotesList = document.getElementById("upvotesList");
+                    upvotesList.innerHTML = "";
+
+                    //population
+                    data.forEach(upvote => {
+                        const listItem = document.createElement("li");
+                        listItem.classList.add("list-group-item");
+
+                        //want title and content displayed
+                        listItem.innerHTML = `<strong>${upvote.title}</strong>: ${upvote.content}`;
+                        upvotesList.appendChild(listItem);
+                    });
+                })
+                .catch(error => console.error('Error fetching upvoted posts:', error));
+        });
+
+
+        //AJAX to fetch user's downvotes array from database when the "downvoted" button is clicked
+        document.getElementById("fetchDownvotes").addEventListener("click", function () {
+            fetch('/Home/GetUserDownvotes') // actual controller's route
+                .then(response => response.json())
+                .then(data => {
+                    const downvotesList = document.getElementById("downvotesList");
+                    downvotesList.innerHTML = "";
+
+                    //population
+                    data.forEach(downvote => {
+                        const listItem = document.createElement("li");
+                        listItem.classList.add("list-group-item");
+
+                        //want title and content displayed
+                        listItem.innerHTML = `<strong>${downvote.title}</strong>: ${downvote.content}`;
+                        downvotesList.appendChild(listItem);
+                    });
+                })
+                .catch(error => console.error('Error fetching downvoted posts:', error));
+        });
+
+
+
+        // AJAX to fetch user's bookmarks array from the database when the "Saved" button is clicked
+        document.getElementById("fetchBookmarks").addEventListener("click", function () {
+            fetch('/Home/GetUserBookmarks') // Route to fetch bookmarks
+                .then(response => response.json())
+                .then(data => {
+                    const bookmarksList = document.getElementById("bookmarksList");
+                    bookmarksList.innerHTML = ""; // Clear existing items
+
+                    // Populate the list with bookmarked posts
+                    data.forEach(bookmark => {
+                        const listItem = document.createElement("li");
+                        listItem.classList.add("list-group-item");
+
+                        // Display the tag of the bookmarked post
+                        listItem.innerHTML = `${bookmark.movieName}`;
+                        bookmarksList.appendChild(listItem);
+                    });
+                })
+                .catch(error => console.error('Error fetching bookmarked posts:', error));
+        });
+
 
         // Update the list when the modal is shown
         document.getElementById('subredditsModal').addEventListener('shown.bs.modal', updateSubredditList);

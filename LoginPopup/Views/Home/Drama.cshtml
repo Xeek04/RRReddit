@@ -103,6 +103,7 @@
             <h1 class="subreddit-title">r/@Model.SubredditName</h1>
 
             <a asp-controller="Post" asp-action="Create" asp-route-subredditName="@Model.SubredditName" class="btn btn-primary">Create Post</a>
+
             <button class="btn btn-light join-button" id="joinButton">Join</button>
         </div>
     </div>
@@ -114,23 +115,15 @@
         <div class="content-area">
             @foreach (var post in Model.Posts)
             {
-                <h3>
-                    <a asp-controller="Post" asp-action="Details" asp-route-id="@post.Id">@post.Title</a>
-                </h3>
-                <div class="post-preview" id="post-@post.Id">
-
-                    <p>
-                        @post.GetPreview(100)
-                    </p>
-                    <p><small>@post.GetTimeAgo()</small></p>
-
-                    <!-- Link to view the full post with interactions -->
-
-
+                <div class="card-body">
+                    <h3>
+                        <a asp-controller="Post" asp-action="Details" asp-route-postId="@post.PostId">@post.Title</a>
+                    </h3>
+                    <p>@post.GetPreview(100)</p>
+                    <p><small>Posted by @post.User @post.GetTimeAgo()</small></p>
                 </div>
             }
         </div>
-
         <!-- sidebar area -->
         <div class="sidebar">
             <h5>About Community</h5>

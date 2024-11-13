@@ -1,0 +1,15 @@
+﻿@model LoginPopup.Models.Comment
+
+<h2>Post a Comment</h2>
+
+<form asp-controller="Comment" asp-action="AddComment" method="post">
+    <input type="hidden" asp-for="PostId" />
+
+    <div class="form-group">
+        <label asp-for="Content">Content</label>
+        <textarea asp-for="Content" class="form-control"></textarea>
+        <span asp-validation-for="Content" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Post Comment</button>
+</form>

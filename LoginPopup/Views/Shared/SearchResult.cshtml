@@ -1,0 +1,45 @@
+﻿@using RRReddit.Models
+@model SubredditViewModel
+
+
+@{
+    ViewData["Title"] = "SearchResult";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .content-area {
+            flex: 0 0 65%;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Search Results for "@ViewData["Query"]"</h1>
+    <h2>@ViewData["ResultMessage"]</h2>
+    <div class="content-area">
+        @if (Model.Posts.Any())
+        {
+            @foreach (var post in Model.Posts)
+            {
+                <div class="card">
+                    <h3>
+                        <a asp-controller="Post" asp-action="Details" asp-route-postId="@post.PostId">@post.Title</a>
+                    </h3>
+                    <div class="post-preview">
+                        <p>@post.GetPreview(100)</p>
+                        <p><small>@post.SubredditName</small></p>
+                        <p><small>@post.GetTimeAgo()</small></p>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <p>No posts found matching your search.</p>
+        }
+    </div>
+</body>
+</html>

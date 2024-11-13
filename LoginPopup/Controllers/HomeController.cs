@@ -7,6 +7,7 @@ using Microsoft.Extensions.Logging;
 using MongoDB.Driver;
 using RRReddit.Models;
 using RRReddit.Data;
+using MongoDB.Bson;
 
 namespace LoginPopup.Controllers
 {
@@ -16,6 +17,8 @@ namespace LoginPopup.Controllers
 
         private readonly IMongoCollection<DatabaseUser>? _users;
         private readonly IMongoCollection<DatabaseUser>? _subreddits;
+        private readonly IMongoCollection<Post> _postsCollection;
+
 
         private readonly FirebaseAuthProvider _firebaseAuth;
 
@@ -27,8 +30,9 @@ namespace LoginPopup.Controllers
 
             _users = mongoDatabase.Database?.GetCollection<DatabaseUser>("users");
             _subreddits = mongoDatabase.Database?.GetCollection<DatabaseUser>("subreddits");
+            _postsCollection = mongoDatabase.Database?.GetCollection<Post>("posts");
         }
-  
+
 
         public IActionResult Logout()
         {
@@ -36,10 +40,33 @@ namespace LoginPopup.Controllers
             return RedirectToAction("Info");
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            // List of subreddits you want to show posts from
+            var subreddits = new List<string> { "Action", "Comedy", "Drama", "Fantasy" };
+
+            // List to hold the selected posts
+            var selectedPosts = new List<Post>();
+
+            foreach (var subreddit in subreddits)
+            {
+                // Get the most recent post from the subreddit (sorted by CreatedAt descending)
+                var filter = Builders<Post>.Filter.Eq(post => post.SubredditName, subreddit);
+                var post = await _postsCollection
+                    .Find(filter)
+                    .SortByDescending(post => post.CreatedAt)
+                    .FirstOrDefaultAsync();
+
+                if (post != null)
+                {
+                    selectedPosts.Add(post);
+                }
+            }
+
+            // Pass the selected posts to the view
+            return View(selectedPosts);
         }
+
 
         [HttpGet]
         public IActionResult Create()
@@ -166,10 +193,16 @@ namespace LoginPopup.Controllers
             return View();
         }
 
-        public IActionResult Subreddit()
+        public IActionResult SearchResult()
         {
             return View();
         }
+
+
+        /*public IActionResult Subreddit()
+        {
+            return View();
+        }*/
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
@@ -325,12 +358,13 @@ namespace LoginPopup.Controllers
 
 
         /* each subreddit gets called in layout and explore */
-        public IActionResult Action()
+        public async Task<IActionResult> Action()
         {
             string subredditName = "Action";
 
-            // Filter posts belonging to this subreddit
-            var subredditPosts = DataStore.Posts.Where(p => p.SubredditName == subredditName).ToList();
+            // Fetch posts from the database where SubredditName matches
+            var filter = Builders<Post>.Filter.Eq(p => p.SubredditName, subredditName);
+            var subredditPosts = await _postsCollection.Find(filter).ToListAsync();
 
             var viewModel = new SubredditViewModel
             {
@@ -341,12 +375,13 @@ namespace LoginPopup.Controllers
             return View("Action", viewModel);
         }
 
-        public IActionResult Comedy()
+
+        public async Task<IActionResult> Comedy()
         {
             string subredditName = "Comedy";
 
-            // Filter posts belonging to this subreddit
-            var subredditPosts = DataStore.Posts.Where(p => p.SubredditName == subredditName).ToList();
+            var filter = Builders<Post>.Filter.Eq(p => p.SubredditName, subredditName);
+            var subredditPosts = await _postsCollection.Find(filter).ToListAsync();
 
             var viewModel = new SubredditViewModel
             {
@@ -357,12 +392,13 @@ namespace LoginPopup.Controllers
             return View("Comedy", viewModel);
         }
 
-        public IActionResult Drama()
+
+        public async Task<IActionResult> Drama()
         {
             string subredditName = "Drama";
 
-            // Filter posts belonging to this subreddit
-            var subredditPosts = DataStore.Posts.Where(p => p.SubredditName == subredditName).ToList();
+            var filter = Builders<Post>.Filter.Eq(p => p.SubredditName, subredditName);
+            var subredditPosts = await _postsCollection.Find(filter).ToListAsync();
 
             var viewModel = new SubredditViewModel
             {
@@ -373,12 +409,12 @@ namespace LoginPopup.Controllers
             return View("Drama", viewModel);
         }
 
-        public IActionResult Fantasy()
+        public async Task<IActionResult> Fantasy()
         {
             string subredditName = "Fantasy";
 
-            // Filter posts belonging to this subreddit
-            var subredditPosts = DataStore.Posts.Where(p => p.SubredditName == subredditName).ToList();
+            var filter = Builders<Post>.Filter.Eq(p => p.SubredditName, subredditName);
+            var subredditPosts = await _postsCollection.Find(filter).ToListAsync();
 
             var viewModel = new SubredditViewModel
             {
@@ -389,12 +425,12 @@ namespace LoginPopup.Controllers
             return View("Fantasy", viewModel);
         }
 
-        public IActionResult Horror()
+        public async Task<IActionResult> Horror()
         {
             string subredditName = "Horror";
 
-            // Filter posts belonging to this subreddit
-            var subredditPosts = DataStore.Posts.Where(p => p.SubredditName == subredditName).ToList();
+            var filter = Builders<Post>.Filter.Eq(p => p.SubredditName, subredditName);
+            var subredditPosts = await _postsCollection.Find(filter).ToListAsync();
 
             var viewModel = new SubredditViewModel
             {
@@ -405,12 +441,12 @@ namespace LoginPopup.Controllers
             return View("Horror", viewModel);
         }
 
-        public IActionResult Mystery()
+        public async Task<IActionResult> Mystery()
         {
             string subredditName = "Mystery";
 
-            // Filter posts belonging to this subreddit
-            var subredditPosts = DataStore.Posts.Where(p => p.SubredditName == subredditName).ToList();
+            var filter = Builders<Post>.Filter.Eq(p => p.SubredditName, subredditName);
+            var subredditPosts = await _postsCollection.Find(filter).ToListAsync();
 
             var viewModel = new SubredditViewModel
             {
@@ -421,12 +457,12 @@ namespace LoginPopup.Controllers
             return View("Mystery", viewModel);
         }
 
-        public IActionResult Romance()
+        public async Task<IActionResult> Romance()
         {
             string subredditName = "Romance";
 
-            // Filter posts belonging to this subreddit
-            var subredditPosts = DataStore.Posts.Where(p => p.SubredditName == subredditName).ToList();
+            var filter = Builders<Post>.Filter.Eq(p => p.SubredditName, subredditName);
+            var subredditPosts = await _postsCollection.Find(filter).ToListAsync();
 
             var viewModel = new SubredditViewModel
             {
@@ -437,12 +473,12 @@ namespace LoginPopup.Controllers
             return View("Romance", viewModel);
         }
 
-        public IActionResult ScienceFiction()
+        public async Task<IActionResult> ScienceFiction()
         {
             string subredditName = "ScienceFiction";
 
-            // Filter posts belonging to this subreddit
-            var subredditPosts = DataStore.Posts.Where(p => p.SubredditName == subredditName).ToList();
+            var filter = Builders<Post>.Filter.Eq(p => p.SubredditName, subredditName);
+            var subredditPosts = await _postsCollection.Find(filter).ToListAsync();
 
             var viewModel = new SubredditViewModel
             {
@@ -453,12 +489,12 @@ namespace LoginPopup.Controllers
             return View("ScienceFiction", viewModel);
         }
 
-        public IActionResult Thriller()
+        public async Task<IActionResult> Thriller()
         {
             string subredditName = "Thriller";
 
-            // Filter posts belonging to this subreddit
-            var subredditPosts = DataStore.Posts.Where(p => p.SubredditName == subredditName).ToList();
+            var filter = Builders<Post>.Filter.Eq(p => p.SubredditName, subredditName);
+            var subredditPosts = await _postsCollection.Find(filter).ToListAsync();
 
             var viewModel = new SubredditViewModel
             {
@@ -469,9 +505,192 @@ namespace LoginPopup.Controllers
             return View("Thriller", viewModel);
         }
 
-        public IActionResult CheckYourEmail()
+        [HttpGet]
+        public async Task<IActionResult> GetUserUpvotes()
         {
-            return View();
+            // Get user email and extract the username
+            var email = HttpContext.Session.GetString("UserEmail");
+            if (string.IsNullOrEmpty(email))
+            {
+                return Json(new { error = "User not authenticated." });
+            }
+            var name = email.Split('@')[0];
+
+            // Query the user by name which is username in database
+            var user = await _users.Find(u => u.UserName == name).FirstOrDefaultAsync();
+
+            if (user != null && user.Upvotes != null && user.Upvotes.Any())
+            {
+                // Convert ObjectId to string
+                var upvoteIds = user.Upvotes.Select(id => id.ToString()).ToList();
+
+                // Create filter using string PostId
+                var filter = Builders<Post>.Filter.In(post => post.PostId, upvoteIds);
+                // Alternatively, using field name as string
+                // var filter = Builders<Post>.Filter.In("PostId", upvoteIds);
+
+                var upvotedPosts = await _postsCollection.Find(filter).ToListAsync();
+
+                // Prepare the result
+                var result = upvotedPosts.Select(post => new
+                {
+                    PostId = post.PostId,
+                    Title = post.Title,
+                    Content = post.Content
+                }).ToList();
+
+                return Json(result); // Return as JSON for frontend consumption
+            }
+            else
+            {
+                return Json(new List<object>()); // Return an empty list if no upvotes found
+            }
+        }
+
+
+
+        [HttpGet]
+        public async Task<IActionResult> GetUserDownvotes()
+        {
+            // Retrieve the user's email from the session
+            var email = HttpContext.Session.GetString("UserEmail");
+            if (string.IsNullOrEmpty(email))
+            {
+                return Json(new { error = "User not authenticated." });
+            }
+
+            // Extract the username from the email
+            var name = email.Split('@')[0];
+
+            // Query the user by username in the database
+            var user = await _users.Find(u => u.UserName == name).FirstOrDefaultAsync();
+
+            if (user != null && user.Downvotes != null && user.Downvotes.Any())
+            {
+                // Convert ObjectIds to string representations
+                var downvoteIds = user.Downvotes.Select(id => id.ToString()).ToList();
+
+                // Create a filter using the string PostId
+                var filter = Builders<Post>.Filter.In(post => post.PostId, downvoteIds);
+                // Alternatively, using field name as string:
+                // var filter = Builders<Post>.Filter.In("PostId", downvoteIds);
+
+                // Fetch the downvoted posts from the database
+                var downvotedPosts = await _postsCollection.Find(filter).ToListAsync();
+
+                // Prepare the result to be returned as JSON
+                var result = downvotedPosts.Select(post => new
+                {
+                    PostId = post.PostId,
+                    Title = post.Title,
+                    Content = post.Content
+                }).ToList();
+
+                return Json(result);
+            }
+            else
+            {
+                // Return an empty list if no downvotes are found
+                return Json(new List<object>());
+            }
+        }
+
+
+
+
+
+        ////////////////////////////bookmarking stuff now
+
+        [HttpPost("/Post/ToggleBookmark")]
+        public async Task<IActionResult> ToggleBookmark(string postId)
+        {
+            // Convert the postId string to an ObjectId
+            if (!ObjectId.TryParse(postId, out ObjectId objectId))
+            {
+                return Json(new { error = "Invalid post ID format." });
+            }
+
+            // Retrieve user email and extract the username
+            var email = HttpContext.Session.GetString("UserEmail");
+            if (string.IsNullOrEmpty(email))
+            {
+                return Json(new { error = "User not authenticated." });
+            }
+            var name = email.Split('@')[0];
+
+            // Query the user by username in the database
+            var user = await _users.Find(u => u.UserName == name).FirstOrDefaultAsync();
+            if (user == null)
+            {
+                return Json(new { error = "User not found." });
+            }
+
+            // Check if the post is already bookmarked by the user
+            bool isBookmarked = user.Bookmarks.Contains(objectId);
+
+            // Update the bookmarks array based on the current state
+            if (!isBookmarked)
+            {
+                // Add post ID to the user's bookmarks array
+                var addToBookmarks = Builders<DatabaseUser>.Update.Push(u => u.Bookmarks, objectId);
+                await _users.UpdateOneAsync(u => u.UserName == name, addToBookmarks);
+            }
+            else
+            {
+                // Remove post ID from the user's bookmarks array
+                var removeFromBookmarks = Builders<DatabaseUser>.Update.Pull(u => u.Bookmarks, objectId);
+                await _users.UpdateOneAsync(u => u.UserName == name, removeFromBookmarks);
+            }
+
+            return Json(new { success = true });
+        }
+
+
+
+
+        [HttpGet]
+        public async Task<IActionResult> GetUserBookmarks()
+        {
+            // Retrieve the user's email from the session
+            var email = HttpContext.Session.GetString("UserEmail");
+            if (string.IsNullOrEmpty(email))
+            {
+                return Json(new { error = "User not authenticated." });
+            }
+
+            // Extract the username from the email
+            var name = email.Split('@')[0];
+
+            // Query the user by username in the database
+            var user = await _users.Find(u => u.UserName == name).FirstOrDefaultAsync();
+
+            if (user != null && user.Bookmarks != null && user.Bookmarks.Any())
+            {
+                // Convert ObjectIds to string representations
+                var bookmarkIds = user.Bookmarks.Select(id => id.ToString()).ToList();
+
+                // Create a filter using the string PostId
+                var filter = Builders<Post>.Filter.In(post => post.PostId, bookmarkIds);
+                // Alternatively, using field name as string:
+                // var filter = Builders<Post>.Filter.In("PostId", bookmarkIds);
+
+                // Fetch the bookmarked posts from the database
+                var bookmarkedPosts = await _postsCollection.Find(filter).ToListAsync();
+
+                // Prepare the result to be returned as JSON
+                var result = bookmarkedPosts.Select(post => new
+                {
+                    PostId = post.PostId,
+                    MovieName = post.MovieName
+                }).ToList();
+
+                return Json(result); // Return the bookmarked posts as JSON
+            }
+            else
+            {
+                // Return an empty list if no bookmarks are found
+                return Json(new List<object>());
+            }
         }
 
     }

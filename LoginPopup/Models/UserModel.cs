@@ -19,6 +19,16 @@ namespace RRReddit.Models
 
         [BsonElement("subreddits"), BsonRepresentation(BsonType.String)]
         public string? Subreddits { get; set; }
+
+        [BsonElement("upvotes")]
+        public List<ObjectId> Upvotes { get; set; }
+
+        [BsonElement("downvotes")]
+        public List<ObjectId> Downvotes { get; set; }
+
+        [BsonElement("bookmarks")]
+        public List<ObjectId> Bookmarks { get; set; }
+
     }
 
     //class to handle incoming request for the controllers that handle updating subreddits

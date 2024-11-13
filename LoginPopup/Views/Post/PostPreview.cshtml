@@ -1,14 +1,24 @@
 ﻿@model LoginPopup.Models.Post
 
-<div class="post-preview" id="post-@Model.Id">
-    <div class="post-title-box">
-        <h3>@Model.Title</h3>
-    </div>
-    <p class="post-snippet">
-        @Model.Content.Substring(0, 100) @(Model.Content.Length > 100 ? "..." : "")
-    </p>
-    <p class="post-time"><small>@Model.CreatedAt</small></p>
+<style>
+    .main-content {
+        margin-left: 500px;
+    }
+</style>
 
-    <!-- Link to view the full post with interactions -->
-    <a asp-controller="Post" asp-action="DetailsPost" asp-route-id="@Model.Id" class="btn btn-primary">View Post</a>
+<div class="container mt-4 main-content">
+    <div class="post-preview" id="post-@Model.PostId">
+        <div class="post-title-box">
+            <h3>@Model.Title</h3>
+        </div>
+        <p class="post-snippet">
+            @Model.GetPreview(100)
+        </p>
+        <p class="post-time">
+            <small>@Model.GetTimeAgo()</small> <!-- Display the "time ago" format for better user readability -->
+        </p>
+
+        <!-- Link to view the full post with interactions -->
+        <a asp-controller="Post" asp-action="Details" asp-route-id="@Model.PostId" class="btn btn-primary">View Post</a>
+    </div>
 </div>

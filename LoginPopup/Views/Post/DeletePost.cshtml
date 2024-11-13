@@ -7,7 +7,7 @@
 <p>@Model.Content</p>
 
 <form asp-action="DeleteConfirmed" method="post">
-    <input type="hidden" asp-for="Id" />
+    <input type="hidden" name="postId" value="@Model.PostId" />
     <button type="submit" class="btn btn-danger">Delete</button>
-    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    <a asp-action="@Model.SubredditName" asp-controller="Home" class="btn btn-secondary">Cancel</a>
 </form>

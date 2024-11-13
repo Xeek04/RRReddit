@@ -1,17 +1,14 @@
-﻿@model IEnumerable<LoginPopup.Models.Post>
-
-
-
-@foreach (var post in Model)
+﻿@foreach (var post in Model)
 {
-    <div class="post" id="post-@post.Id">
+    <div class="post" id="post-@post.PostId">
         <span>@post.GetTimeAgo()</span>
         <h3>
-            <a asp-action="Details" asp-route-id="@post.Id">@post.Title</a>
+            <a asp-action="Details" asp-route-postId="@post.PostId">@post.Title</a>
         </h3>
-        <p>@post.GetPreview(100)</p> <!-- Show first 100 characters -->
-     
+        <p>@post.GetPreview(100)</p>
+        <!-- Delete button for each post -->
+        <form asp-action="Delete" asp-controller="Post" method="get" asp-route-postId="@post.PostId" style="display: inline;">
+            <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
     </div>
 }
-
-<a asp-action="Create" class="btn btn-primary">Create New Post</a>

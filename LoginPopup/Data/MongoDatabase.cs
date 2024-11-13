@@ -6,6 +6,7 @@ namespace RRReddit.Data
     {
         private readonly IConfiguration _configuration;
         private readonly IMongoDatabase _database;
+
         public MongoDatabase(IConfiguration configuration)
         {
             _configuration = configuration;
@@ -16,6 +17,6 @@ namespace RRReddit.Data
             _database = mongoClient.GetDatabase("RRReddit");
         }
 
-        public IMongoDatabase? Database => _database;
+        public IMongoDatabase Database => _database;
     }
 }
